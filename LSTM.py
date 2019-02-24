@@ -18,6 +18,7 @@ class LSTM(torch.nn.Module):
 
         # Define the output layer
         self.linear = torch.nn.Linear(self.hidden_dim, self.output_dim)
+        torch.nn.init.xavier_normal_(self.linear.weight)
     
     def clear_hidden(self):
         #  shape for h + c states: (num_layers * num_directions, batch, hidden_size)
