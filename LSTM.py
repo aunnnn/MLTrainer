@@ -32,9 +32,12 @@ class LSTM(torch.nn.Module):
         
         seq_len = input.size()[0]
         
-        lstm_out, self.hidden = self.lstm(input.view(seq_len, self.batch_size, -1),self.hidden)
+        lstm_out, hidden = self.lstm(input.view(seq_len, self.batch_size, -1),self.hidden)
         
-        print(lstm_out.size())
+        # TODO detach hidden state from previous calcs?? 
+        self.hidden = (hidden[0].detach(), hidden[1].detach())
+        
+        #print(lstm_out.size())
         
         # output of linear layer
         y_pred = self.linear(lstm_out.view(seq_len, self.hidden_dim))

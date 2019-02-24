@@ -7,33 +7,35 @@ class Dataloader():
         self.num_chars=len(dictionary)
         self.dictionary=dictionary
     
-    def __encodeChar(self,char):
+    def __hotencode_char(self,char):
         output = torch.zeros(self.num_chars)
         index = self.dictionary[char]
         output[index] = 1
         return output
     
-    def __encodeFile(self,filepath):
-        output = []
+    def __encode_file(self,filepath):
+        hotencoded_seq, numerized_seq = [],[]
 
         f = open(filepath, "r")
         line = f.readline()
         while line:
             for char in line:
-                output.append(self.__encodeChar(char))
+                hotencoded_seq.append(self.__hotencode_char(char))
+                numerized_seq.append(self.dictionary[char])
             line = f.readline()
-        return torch.stack(output,dim=0)
-        return output
+            
         f.close()
-
+        
+        return torch.stack(hotencoded_seq,dim=0), torch.tensor(numerized_seq)
+   
     def load_data(self,filepath, chunk_size=100):
         '''
         public function: returns encoded sequence from text file
         returns a list of chunks
         each chunk is a list of hot encoded tensors
         '''
-        encoded_sequence = self.__encodeFile(filepath)
-        inputs,labels = encoded_sequence[:-1], encoded_sequence[1:]
+        hotencoded_sequence, numerized_sequence = self.__encode_file(filepath)
+        inputs,labels = hotencoded_sequence[:-1], numerized_sequence[1:]
             
         if chunk_size:
             input_chunks=[]
