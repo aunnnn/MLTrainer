@@ -1,0 +1,13 @@
+{
+    "model": "BasicLSTM(\n  (lstm): LSTM(93, 100, batch_first=True)\n  (h2o): Linear(in_features=100, out_features=93, bias=True)\n)",
+    "criterion": "CrossEntropyLoss()",
+    "optimizer": "SGD (\nParameter Group 0\n    dampening: 0\n    lr: 0.05\n    momentum: 0\n    nesterov: False\n    weight_decay: 0\n)",
+    "path_to_save_result": "./",
+    "session_name": "test_session_test_loss",
+    "n_epochs": 200,
+    "print_every_n_epochs": 5,
+    "validate_every_v_epochs": 5,
+    "verbose": true,
+    "num_epochs_no_improvement_early_stop": 3,
+    "use_early_stop": true
+}
