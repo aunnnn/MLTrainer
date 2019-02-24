@@ -15,7 +15,7 @@ import torch.nn as nn
 import torch.optim as optim
 
 
-SESSION_NAME = "session_train_100_hiddens_lower_lr"
+SESSION_NAME = "session_train_pass_hidden_between_epochs"
 PARENT_PATH_TO_SAVE_RESULT = './'
 
 print("Session: " + SESSION_NAME)
@@ -72,6 +72,7 @@ trainer = PA4Trainer(model, criterion, optimizer, all_loaders, {
     'validate_every_v_epochs': 5,
     'verbose': True,
     'num_epochs_no_improvement_early_stop': 3,
-    'use_early_stop': True
+    'use_early_stop': True,
+    'pass_hidden_states_between_epochs': True,
 })
 trainer.start()

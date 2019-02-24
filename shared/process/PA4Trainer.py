@@ -71,7 +71,8 @@ class PA4Trainer:
         self.VALIDATE_EVERY_V_EPOCHS = config['validate_every_v_epochs']
         self.VERBOSE = config['verbose']
         self.NUM_EPOCHS_NO_IMPROVEMENT_EARLY_STOP = config['num_epochs_no_improvement_early_stop']
-        self.USE_EARLY_STOP = config['use_early_stop']        
+        self.USE_EARLY_STOP = config['use_early_stop']
+        self.PASS_HIDDEN_STATE_BETWEEN_EPOCHS = config['pass_hidden_states_between_epochs']
         
         self.save_folder_path = os.path.join(self.PATH_TO_SAVE_RESULT, self.SESSION_NAME)
         pathlib.Path(self.save_folder_path).mkdir(parents=True, exist_ok=True)
@@ -133,8 +134,10 @@ class PA4Trainer:
         self.is_early_stopped = False
 
         for i_epoch in range(self.N_EPOCHS):
-            # Reset hidden to zeros for new epoch
-            self.model.reset_hidden(self.computing_device)
+            
+            if self.PASS_HIDDEN_STATE_BETWEEN_EPOCHS:
+                # Reset hidden to zeros for new epoch
+                self.model.reset_hidden(self.computing_device)
             
             current_epoch_loss = 0.0
 
