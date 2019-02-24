@@ -57,3 +57,21 @@ Epoch 70, validation loss: 2.1856656849825824
 Epoch 70, 35% (29m 59s) train loss: 1.506205
 Epoch 75, validation loss: 2.1566673080126444
 Epoch 75, 37% (32m 6s) train loss: 1.491849
+Epoch 80, validation loss: 2.132943836494728
+Epoch 80, 40% (34m 12s) train loss: 1.469902
+Epoch 85, validation loss: 2.9748467286427815
+Validation loss increased for 1 epochs...
+Epoch 85, 42% (36m 19s) train loss: 2.094858
+Epoch 90, validation loss: 2.3148483096228705
+Validation loss increased for 2 epochs...
+Epoch 90, 45% (38m 26s) train loss: 1.872932
+Epoch 95, validation loss: 2.2380103775306983
+Validation loss increased for 3 epochs...
+Stop training as validation loss increases for 3 epochs.
+-----------
+Saving result...
+-> model saved.
+-> report saved.
+-> misc.json saved.
+Done successfully!
+---------------------
