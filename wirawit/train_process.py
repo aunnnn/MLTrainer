@@ -15,7 +15,7 @@ import torch.nn as nn
 import torch.optim as optim
 
 
-SESSION_NAME = "test_session_test_loss"
+SESSION_NAME = "session_train_100_hiddens_lower_lr"
 PARENT_PATH_TO_SAVE_RESULT = './'
 
 print("Session: " + SESSION_NAME)
@@ -23,7 +23,7 @@ print("---------------")
 
 print("Loading data...")
 
-LEARNING_RATE = 0.05
+LEARNING_RATE = 0.01
 
 all_loaders, char_index = build_all_loaders('../pa4Data/', chunk_size=100, customize_loader_params={
     'num_workers': 4,
@@ -50,7 +50,7 @@ if os.path.exists(nohuppath):
     print("Removed old nohup.out")
 
 # PRINT TO .log FILE INSTEAD
-logfilename = "session_{0}.log".format(SESSION_NAME)
+logfilename = "log_{0}.log".format(SESSION_NAME)
 logsavepath = os.path.join(PARENT_PATH_TO_SAVE_RESULT, SESSION_NAME, logfilename)
 
 print("Redirecting all prints to {0}.".format(logsavepath))
@@ -58,6 +58,7 @@ print("Redirecting all prints to {0}.".format(logsavepath))
 os.makedirs(os.path.join(PARENT_PATH_TO_SAVE_RESULT, SESSION_NAME), exist_ok=True)
 log = open(logsavepath, "w")
 sys.stdout = log
+sys.stderr = log
 
 import datetime
 currentDT = datetime.datetime.now()

@@ -1,0 +1,63 @@
+Start time: 2019-02-23 21:37:33
+Coverted model to device: cuda
+-----------
+Trainer Config:
+{   'criterion': 'CrossEntropyLoss()',
+    'model': 'BasicLSTM(\n'
+             '  (lstm): LSTM(93, 100, batch_first=True)\n'
+             '  (h2o): Linear(in_features=100, out_features=93, bias=True)\n'
+             ')',
+    'n_epochs': 200,
+    'num_epochs_no_improvement_early_stop': 3,
+    'optimizer': 'SGD (\n'
+                 'Parameter Group 0\n'
+                 '    dampening: 0\n'
+                 '    lr: 0.05\n'
+                 '    momentum: 0\n'
+                 '    nesterov: False\n'
+                 '    weight_decay: 0\n'
+                 ')',
+    'path_to_save_result': './',
+    'print_every_n_epochs': 5,
+    'session_name': 'session_train_100_hiddens',
+    'use_early_stop': True,
+    'validate_every_v_epochs': 5,
+    'verbose': True}
+-----------
+Start training...
+Epoch 0, validation loss: 3.3190945893746835
+Epoch 0, 0% (0m 25s) train loss: 3.482192
+Epoch 5, validation loss: 2.519859261512756
+Epoch 5, 2% (2m 33s) train loss: 1.990835
+Epoch 10, validation loss: 2.3526697402530248
+Epoch 10, 5% (4m 41s) train loss: 1.654602
+Epoch 15, validation loss: 2.2263883372589395
+Epoch 15, 7% (6m 51s) train loss: 1.528258
+Epoch 20, validation loss: 2.136037022449352
+Epoch 20, 10% (8m 56s) train loss: 1.469471
+Epoch 25, validation loss: 2.062932366353494
+Epoch 25, 12% (11m 2s) train loss: 1.391249
+Epoch 30, validation loss: 1.95864598998317
+Epoch 30, 15% (13m 11s) train loss: 1.356140
+Epoch 35, validation loss: 1.8944734647538928
+Epoch 35, 17% (15m 17s) train loss: 1.318773
+Epoch 40, validation loss: 1.873224572075738
+Epoch 40, 20% (17m 23s) train loss: 1.286492
+Epoch 45, validation loss: 1.8714853118967127
+Epoch 45, 22% (19m 27s) train loss: 1.260742
+Epoch 50, validation loss: 1.8757097989541514
+Validation loss increased for 1 epochs...
+Epoch 50, 25% (21m 32s) train loss: 1.238244
+Epoch 55, validation loss: 1.875841120702249
+Validation loss increased for 2 epochs...
+Epoch 55, 27% (23m 39s) train loss: 1.221831
+Epoch 60, validation loss: 1.8841286870285316
+Validation loss increased for 3 epochs...
+Stop training as validation loss increases for 3 epochs.
+-----------
+Saving result...
+-> model saved.
+-> report saved.
+-> misc.json saved.
+Done successfully!
+---------------------

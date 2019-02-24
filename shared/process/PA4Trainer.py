@@ -172,8 +172,8 @@ class PA4Trainer:
                             ## EARLY STOPPED! #
                             ###################
                             # Restore model before exit
-                            model.load_state_dict(torch.load(self.EARLY_STOP_SAVE_PATH))
-                            model.eval()
+                            self.model.load_state_dict(torch.load(self.EARLY_STOP_SAVE_PATH))
+                            self.model.eval()
                             print('Stop training as validation loss increases for {} epochs.'.format(self.NUM_EPOCHS_NO_IMPROVEMENT_EARLY_STOP))
                             self.is_early_stopped = True
                             break

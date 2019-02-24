@@ -3,7 +3,7 @@
     "criterion": "CrossEntropyLoss()",
     "optimizer": "SGD (\nParameter Group 0\n    dampening: 0\n    lr: 0.05\n    momentum: 0\n    nesterov: False\n    weight_decay: 0\n)",
     "path_to_save_result": "./",
-    "session_name": "test_session_test_loss",
+    "session_name": "session_train_100_hiddens",
     "n_epochs": 200,
     "print_every_n_epochs": 5,
     "validate_every_v_epochs": 5,

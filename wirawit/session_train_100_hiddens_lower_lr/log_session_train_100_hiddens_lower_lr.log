@@ -1,0 +1,59 @@
+Start time: 2019-02-23 22:30:58
+Coverted model to device: cuda
+-----------
+Trainer Config:
+{   'criterion': 'CrossEntropyLoss()',
+    'model': 'BasicLSTM(\n'
+             '  (lstm): LSTM(93, 100, batch_first=True)\n'
+             '  (h2o): Linear(in_features=100, out_features=93, bias=True)\n'
+             ')',
+    'n_epochs': 200,
+    'num_epochs_no_improvement_early_stop': 3,
+    'optimizer': 'SGD (\n'
+                 'Parameter Group 0\n'
+                 '    dampening: 0\n'
+                 '    lr: 0.01\n'
+                 '    momentum: 0\n'
+                 '    nesterov: False\n'
+                 '    weight_decay: 0\n'
+                 ')',
+    'path_to_save_result': './',
+    'print_every_n_epochs': 5,
+    'session_name': 'session_train_100_hiddens_lower_lr',
+    'use_early_stop': True,
+    'validate_every_v_epochs': 5,
+    'verbose': True}
+-----------
+Start training...
+Epoch 0, validation loss: 3.632211697543109
+Epoch 0, 0% (0m 26s) train loss: 3.778843
+Epoch 5, validation loss: 3.1765390982451263
+Epoch 5, 2% (2m 32s) train loss: 3.144496
+Epoch 10, validation loss: 2.8689136063611067
+Epoch 10, 5% (4m 38s) train loss: 2.645834
+Epoch 15, validation loss: 2.665184707464995
+Epoch 15, 7% (6m 45s) train loss: 2.295062
+Epoch 20, validation loss: 2.5783744730772797
+Epoch 20, 10% (8m 51s) train loss: 2.068408
+Epoch 25, validation loss: 2.5029897022247316
+Epoch 25, 12% (10m 58s) train loss: 1.922186
+Epoch 30, validation loss: 2.4441296582751804
+Epoch 30, 15% (13m 4s) train loss: 1.823848
+Epoch 35, validation loss: 2.4014762438668145
+Epoch 35, 17% (15m 10s) train loss: 1.745970
+Epoch 40, validation loss: 2.3482683236510664
+Epoch 40, 20% (17m 17s) train loss: 1.694392
+Epoch 45, validation loss: 2.305954428955361
+Epoch 45, 22% (19m 25s) train loss: 1.648111
+Epoch 50, validation loss: 2.292890545262231
+Epoch 50, 25% (21m 31s) train loss: 1.608451
+Epoch 55, validation loss: 2.2727475784443043
+Epoch 55, 27% (23m 38s) train loss: 1.584222
+Epoch 60, validation loss: 2.2480679913803385
+Epoch 60, 30% (25m 45s) train loss: 1.576081
+Epoch 65, validation loss: 2.2117653123537697
+Epoch 65, 32% (27m 51s) train loss: 1.528721
+Epoch 70, validation loss: 2.1856656849825824
+Epoch 70, 35% (29m 59s) train loss: 1.506205
+Epoch 75, validation loss: 2.1566673080126444
+Epoch 75, 37% (32m 6s) train loss: 1.491849
