@@ -63,9 +63,12 @@ def build_character_index(filename):
     """
     with open(filename) as f:
         text_blob = f.read()
-        chars = set(text_blob)
+        chars = sorted(set(text_blob))
         # Sort so that it's interpretable
-        return {char: i for i, char in enumerate(sorted(chars))}
+        char_2_index = {char: i for i, char in enumerate(chars)}
+        index_2_char = {i: char for i, char in enumerate(chars)}
+        return char_2_index, index_2_char
+    
     raise RuntimeError("Can't read file")
     
 def build_all_loaders(data_parent_dir, chunk_size=100, customize_loader_params=dict()):
@@ -74,10 +77,10 @@ def build_all_loaders(data_parent_dir, chunk_size=100, customize_loader_params=d
     """
     
     # Build char index from training data
-    char_index = build_character_index(os.path.join(data_parent_dir, 'train.txt'))
+    char_2_index, index_2_char = build_character_index(os.path.join(data_parent_dir, 'train.txt'))
     
     all_files = ['train', 'val', 'test']    
-    all_datasets = {name: PA4Dataset(os.path.join(data_parent_dir, "{0}.txt".format(name)), char_index, chunk_size=chunk_size)
+    all_datasets = {name: PA4Dataset(os.path.join(data_parent_dir, "{0}.txt".format(name)), char_2_index, chunk_size=chunk_size)
                     for name in all_files}
     
     default_params = {
@@ -88,4 +91,5 @@ def build_all_loaders(data_parent_dir, chunk_size=100, customize_loader_params=d
     params = {**default_params, **customize_loader_params}
     
     all_loaders = {name: data.DataLoader(dataset, **params) for name, dataset in all_datasets.items()}
-    return all_loaders, char_index
+    return all_loaders, {'char_2_index': char_2_index, 
+                         'index_2_char': index_2_char}

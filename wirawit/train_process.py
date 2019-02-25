@@ -15,7 +15,7 @@ import torch.nn as nn
 import torch.optim as optim
 
 
-SESSION_NAME = "session_train_pass_hidden_between_epochs"
+SESSION_NAME = "session_train_pass_hidden_between_epochs_lower_lr"
 PARENT_PATH_TO_SAVE_RESULT = './'
 
 print("Session: " + SESSION_NAME)
@@ -23,11 +23,13 @@ print("---------------")
 
 print("Loading data...")
 
-LEARNING_RATE = 0.01
+LEARNING_RATE = 0.0005
 
-all_loaders, char_index = build_all_loaders('../pa4Data/', chunk_size=100, customize_loader_params={
+all_loaders, other_infos = build_all_loaders('../pa4Data/', chunk_size=100, customize_loader_params={
     'num_workers': 4,
 })
+
+char_index = other_infos['char_2_index']
 
 print("Done.")
 
@@ -67,11 +69,11 @@ print("Start time:", currentDT.strftime("%Y-%m-%d %H:%M:%S"))
 trainer = PA4Trainer(model, criterion, optimizer, all_loaders, {
     'path_to_save_result': PARENT_PATH_TO_SAVE_RESULT,
     'session_name': SESSION_NAME,
-    'n_epochs': 200,
+    'n_epochs': 300,
     'print_every_n_epochs': 5,
     'validate_every_v_epochs': 5,
     'verbose': True,
-    'num_epochs_no_improvement_early_stop': 3,
+    'num_epochs_no_improvement_early_stop': 5,
     'use_early_stop': True,
     'pass_hidden_states_between_epochs': True,
 })
