@@ -132,10 +132,13 @@ class PA4Trainer:
         consecutive_no_improvement_epochs = 0
         
         self.is_early_stopped = False
+        
+        # Set initial hidden
+        self.model.reset_hidden(self.computing_device)
 
         for i_epoch in range(self.N_EPOCHS):
             
-            if self.PASS_HIDDEN_STATE_BETWEEN_EPOCHS:
+            if not self.PASS_HIDDEN_STATE_BETWEEN_EPOCHS:
                 # Reset hidden to zeros for new epoch
                 self.model.reset_hidden(self.computing_device)
             
