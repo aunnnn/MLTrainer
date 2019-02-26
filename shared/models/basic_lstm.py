@@ -14,9 +14,7 @@ class BasicLSTM(nn.Module):
         self.num_hidden = num_hidden
         
         self.lstm = nn.LSTM(num_input, num_hidden, batch_first=True)
-        self.h2o = nn.Linear(num_hidden, num_output)
-        
-        self.hidden = None
+        self.h2o = nn.Linear(num_hidden, num_output)       
 
         init.xavier_normal_(self.h2o.weight)
     
