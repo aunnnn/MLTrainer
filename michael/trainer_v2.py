@@ -145,7 +145,7 @@ class PA4Trainer_v2:
                 # NEW EDITTED #
                 ###############
                 # reset the hidden layer at the end of the 
-                if reset:
+                if reset.tolist()[0]:
                     self.model.reset_hidden(self.computing_device)
                 current_epoch_loss += loss
 
@@ -201,12 +201,12 @@ class PA4Trainer_v2:
         """
         total_val_loss = 0
         with torch.no_grad():
-            for (inputs, labels) in loader:
+            for (inputs, labels, reset) in loader:
                 inputs, labels = inputs.to(self.computing_device), labels.to(self.computing_device)
-
                 loss = self.__evaluate_loss_one_chunk(inputs, labels)
                 total_val_loss += loss
-                
+                if reset.tolist()[0]:
+                    self.model.reset_hidden(self.computing_device)
         # Loss avg by chunks, a bit skewed last chunk
         return total_val_loss/len(loader)
         

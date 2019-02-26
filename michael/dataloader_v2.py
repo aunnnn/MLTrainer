@@ -12,11 +12,12 @@ class PA4Dataset_v2(data.DataLoader):
     
     def __init__(self, encoded_file, character_index, chunk_size=100):        
         self.character_index = character_index
+        # index_character dictionary for decoding tensor purposes
         self.encoded_file = encoded_file
         self.chunk_size = chunk_size
-        self.text_chunks, self.reset_flags = PA4Dataset.__load_text_chunks(encoded_file, chunk_size)
+        self.text_chunks, self.reset_flags = PA4Dataset_v2.__load_text_chunks(encoded_file, chunk_size)
         self.num_chunks = len(self.text_chunks)
-        
+
     def __len__(self):
         return self.num_chunks
     
@@ -31,7 +32,7 @@ class PA4Dataset_v2(data.DataLoader):
         cur_chunk = self.text_chunks[index]
         cur_reset_flag = self.reset_flags[index]
         
-        input_tensors = torch.zeros(len(cur_chunk), len(self.character_index))
+        input_tensors = torch.zeros(self.chunk_size, len(self.character_index))
         for i in range(len(cur_chunk)):
             # one hot encode input sequence tensor
             input_tensors[i, self.character_index[cur_chunk[i]]] = 1
@@ -55,6 +56,7 @@ class PA4Dataset_v2(data.DataLoader):
         Returns a list of strings each with length of chunk_size
         """
         i = 0
+        text_chunks, reset_flags = [], []
         while i < len(encoded_file):
             line = encoded_file[i: i+chunk_size]
             # chunk ends early with "`\n" as a signal for end of the character
@@ -99,6 +101,16 @@ def encoding_start_end_tokens(filename):
             text_blob += line
         return text_blob
     raise RuntimeError("Can't read file")
+
+def decode_tensors(index_char, input_tensors, label_tensors, reset_flag, chunk_size = 100):
+    if len(input_tensors.shape) > 2:
+        input_tensors = input_tensors.reshape(chunk_size, -1)
+        label_tensors = label_tensors.reshape(chunk_size, -1)
+    input_indices = input_tensors.argmax(dim=1).tolist()
+    label_indices = label_tensors.argmax(dim=1).tolist()
+    decode_input = "".join([index_char[i] for i in input_indices])
+    decode_label = "".join([index_char[i] for i in label_indices])
+    return decode_input, decode_label, reset_flag.tolist()[0]
     
 def build_all_loaders(data_parent_dir, chunk_size=100, customize_loader_params=dict()):
     """
@@ -107,10 +119,10 @@ def build_all_loaders(data_parent_dir, chunk_size=100, customize_loader_params=d
     
     # Build char index from training data
     char_index = build_character_index(os.path.join(data_parent_dir, 'train.txt'))
+    index_char = {char_index[char]: char for char in char_index.keys()}
     
     all_files = ['train', 'val', 'test']    
-    encoded_file = encoding_start_end_tokens(os.path.join(data_parent_dir, "{0}.txt".format(name)))
-    all_datasets = {name: PA4Dataset(encoded_file, char_index, chunk_size=chunk_size) 
+    all_datasets = {name: PA4Dataset_v2(encoding_start_end_tokens(os.path.join(data_parent_dir, "{0}.txt".format(name))), char_index, chunk_size=chunk_size) 
                     for name in all_files}
     
     default_params = {
@@ -121,4 +133,4 @@ def build_all_loaders(data_parent_dir, chunk_size=100, customize_loader_params=d
     params = {**default_params, **customize_loader_params}
     
     all_loaders = {name: data.DataLoader(dataset, **params) for name, dataset in all_datasets.items()}
-    return all_loaders, char_index
+    return all_loaders, char_index, index_char
