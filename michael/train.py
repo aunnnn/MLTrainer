@@ -66,7 +66,7 @@ trainer = PA4Trainer_v2(model, criterion, optimizer, all_loaders, {
     'print_every_n_epochs': 5,
     'validate_every_v_epochs': 5,
     'verbose': True,
-    'num_epochs_no_improvement_early_stop': 5,
+    'num_epochs_no_improvement_early_stop': 3, 
     'use_early_stop': True
 })
 trainer.start()
