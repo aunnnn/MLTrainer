@@ -137,11 +137,8 @@ class PA4Trainer:
             self.model.reset_hidden(self.computing_device)
             
             current_epoch_loss = 0.0
-            i=1
             for (inputs, labels) in train_loader:
                 inputs, labels = inputs.to(self.computing_device), labels.to(self.computing_device)
-#                 print(i, ":" , inputs.size())
-#                 i +=1
                 loss = self.__train_one_chunk(inputs, labels)
                 current_epoch_loss += loss
 
@@ -226,7 +223,7 @@ class PA4Trainer:
 
         # Turn into non-zero indices
         label_inds = labels.topk(1, dim=1)[1].view(-1)
-        cross_entropy_loss = self.criterion(logits[0], label_inds)
+        cross_entropy_loss = self.criterion(logits, label_inds)
 
         cross_entropy_loss.backward()    
         self.optimizer.step()
@@ -248,7 +245,7 @@ class PA4Trainer:
 
         # Turn into non-zero indices
         label_inds = labels.topk(1, dim=1)[1].view(-1)
-        cross_entropy_loss = self.criterion(logits[0], label_inds)
+        cross_entropy_loss = self.criterion(logits, label_inds)
         return cross_entropy_loss.item()        
         
         

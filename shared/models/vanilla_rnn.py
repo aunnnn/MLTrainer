@@ -26,13 +26,11 @@ class VanillaRNN(nn.Module):
             self.hidden = self.init_hidden(input.size()[1], self.computing_device)
            
         if self.hidden.size()[1] > input.size()[1]:
-#             print("this case is executed")
             self.full_size_hidden = self.hidden
             self.hidden = self.hidden[:, :input.size()[1], :]
         if self.hidden.size()[1] < input.size()[1]:
             self.hidden = self.full_size_hidden
         
-#         print(self.hidden.size())
                 
         input_combined = torch.cat((input, self.hidden), 2)
         
@@ -45,7 +43,7 @@ class VanillaRNN(nn.Module):
         # Hidden to Output
         output = self.h2o(self.hidden)
         
-        return output
+        return output[0]
    
     def reset_hidden(self, computing_device=None):
         self.hidden = None
