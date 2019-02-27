@@ -71,7 +71,15 @@ class PA4Trainer:
         self.VALIDATE_EVERY_V_EPOCHS = config['validate_every_v_epochs']
         self.VERBOSE = config['verbose']
         self.NUM_EPOCHS_NO_IMPROVEMENT_EARLY_STOP = config['num_epochs_no_improvement_early_stop']
-        self.USE_EARLY_STOP = config['use_early_stop']        
+        self.USE_EARLY_STOP = config['use_early_stop']       
+
+        self.USE_LR_SCHED = True
+        if 'use_lr_scheduler' in config:
+            self.USE_LR_SCHED = config['use_lr_scheduler']
+        else:
+            config['use_lr_scheduler'] = self.USE_LR_SCHED
+
+
         
         self.save_folder_path = os.path.join(self.PATH_TO_SAVE_RESULT, self.SESSION_NAME)
         pathlib.Path(self.save_folder_path).mkdir(parents=True, exist_ok=True)
@@ -129,6 +137,9 @@ class PA4Trainer:
         min_val_loss = float('inf')
         prev_val_loss = float('inf')
         consecutive_no_improvement_epochs = 0
+
+        # Create a learning rate scheduler
+        scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(self.optimizer, patience=self.NUM_EPOCHS_NO_IMPROVEMENT_EARLY_STOP-1, verbose=True)
         
         self.is_early_stopped = False
 
@@ -152,6 +163,9 @@ class PA4Trainer:
                 self.v_interval_train_losses.append(epoch_avg_train_loss)
                 val_loss = self.__get_validation_loss()
                 self.v_interval_val_losses.append(val_loss)
+
+                if self.USE_LR_SCHED:
+                    self.scheduler.step(val_loss)
                 
                 print('Epoch {0}, validation loss: {1}'.format(i_epoch, val_loss))
                 
