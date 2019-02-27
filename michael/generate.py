@@ -22,23 +22,44 @@ def get_char_index():
     })
     return char_index
 
+def softmax_sampling(output, temp=2):
+    '''
+    return a sampled link based on probability
+    '''
+    probs = torch.exp(output / temp)/torch.exp(output / temp).sum()
+    weights = probs.cpu().numpy().flatten()
+    index = np.random.choice(np.arange(weights.shape[0]), p=weights)
+    return int(index)
+    
+def argmax_sampling(output):
+    topv, topi = output.topk(1)
+    topi = topi[0].tolist()[0]
+    return topi
+    
 # Sample from a category and starting letter
 def sample(model, char_index, computing_device, start_letter='%'):
+    max_length = 1000
     index_char = {char_index[char]: char for char in char_index.keys()}
     sample_text = "" + start_letter
     with torch.no_grad():  # no need to track history in sampling
         output = torch.zeros(1, len(char_index))
         model.reset_hidden(computing_device)
-
         output[0, char_index[start_letter]] = 1
-
+        output = output.unsqueeze(dim=0)
         for i in range(max_length):
+            output = output.to(computing_device)
             output = model(output)
-            topv, topi = output.topk(1)
-            topi = topi[1][0]
+            # switch to use argmax sampling
+            # topi = argmax_sampling(output)
+            topi = softmax_sampling(output, temp=1)
+            # terminate if reach the <end> symbol
+            if index_char[topi] == '`':
+                sample_text += index_char[topi]
+                break
             sample_text += index_char[topi]
             output = torch.zeros(1, len(char_index))
-            output[0, char_index[topi]] = 1
+            output[0, topi] = 1
+            output = output.unsqueeze(dim=0)
     return sample_text
 
 SESSION_NAME = "session_train_100_hiddens_adam"
@@ -52,6 +73,7 @@ EARLY_STOP_SAVE_PATH = os.path.join(save_folder_path, 'model_state_min_val_so_fa
 
 # char_index = pickle.load(dict_savepath)
 char_index = get_char_index()
+print("Loading char_index")
 
 print("Session (Generation): " + SESSION_NAME)
 print("---------------")
@@ -61,9 +83,11 @@ HIDDEN_SIZE = 100
 OUTPUT_SIZE = len(char_index)
 
 model = BasicLSTM(INPUT_SIZE, HIDDEN_SIZE, OUTPUT_SIZE)
-model.load_state_dict(torch.load(os.path.join()))
+model.load_state_dict(torch.load(EARLY_STOP_SAVE_PATH))
 computing_device = get_computing_device()
 model.to(computing_device)
 print("Model Loaded Best Checkpoint.")
 
 print("Sample One Song")
+song = sample(model, char_index, computing_device)
+print("song generated: {}".format(song))
