@@ -139,7 +139,7 @@ class PA4Trainer:
         consecutive_no_improvement_epochs = 0
 
         # Create a learning rate scheduler
-        scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(self.optimizer, patience=self.NUM_EPOCHS_NO_IMPROVEMENT_EARLY_STOP-1, verbose=True)
+        self.scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(self.optimizer, patience=self.NUM_EPOCHS_NO_IMPROVEMENT_EARLY_STOP-1, verbose=True)
         
         self.is_early_stopped = False
 

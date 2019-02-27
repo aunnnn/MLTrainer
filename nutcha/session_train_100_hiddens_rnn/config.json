@@ -8,6 +8,7 @@
     "print_every_n_epochs": 5,
     "validate_every_v_epochs": 5,
     "verbose": true,
-    "num_epochs_no_improvement_early_stop": 3,
-    "use_early_stop": true
+    "num_epochs_no_improvement_early_stop": 5,
+    "use_early_stop": true,
+    "use_lr_scheduler": true
 }
