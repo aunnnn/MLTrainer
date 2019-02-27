@@ -7,6 +7,7 @@ from lstm import *
 import numpy as np
 import torch.nn as nn
 import torch.optim as optim
+import pickle
 
 
 SESSION_NAME = "session_train_100_hiddens_adam"
@@ -47,13 +48,20 @@ if os.path.exists(nohuppath):
 # PRINT TO .log FILE INSTEAD
 logfilename = "log_{0}.log".format(SESSION_NAME)
 logsavepath = os.path.join(PARENT_PATH_TO_SAVE_RESULT, SESSION_NAME, logfilename)
-
 print("Redirecting all prints to {0}.".format(logsavepath))
+
+# SAVE char_index dictionary as pickle file
+dict_filename = "char_index_dict.pickle"
+dict_savepath = os.path.join(PARENT_PATH_TO_SAVE_RESULT, SESSION_NAME, dict_filename)
 
 os.makedirs(os.path.join(PARENT_PATH_TO_SAVE_RESULT, SESSION_NAME), exist_ok=True)
 log = open(logsavepath, "w")
 sys.stdout = log
 sys.stderr = log
+
+# dump the pickle file in the session directory
+pickle.dump(char_index, dict_savepath)
+print("Dumping char_index dictionary to {}".format(dict_savepath))
 
 import datetime
 currentDT = datetime.datetime.now()
