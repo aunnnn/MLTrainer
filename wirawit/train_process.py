@@ -7,6 +7,7 @@ import os
 sys.path.append('../')
 from shared.process.pa4_dataloader import build_all_loaders
 from shared.models.basic_lstm import BasicLSTM
+from shared.models.multi_layer_lstm import MultiLayerLSTM
 from shared.process.PA4Trainer import PA4Trainer
 
 import numpy as np
@@ -15,7 +16,7 @@ import torch.nn as nn
 import torch.optim as optim
 
 
-SESSION_NAME = "session_train_pass_hidden_between_epochs_lower_lr"
+SESSION_NAME = "multi2_lstm150"
 PARENT_PATH_TO_SAVE_RESULT = './'
 
 print("Session: " + SESSION_NAME)
@@ -23,10 +24,10 @@ print("---------------")
 
 print("Loading data...")
 
-LEARNING_RATE = 0.0005
+LEARNING_RATE = 0.001
 
 all_loaders, other_infos = build_all_loaders('../pa4Data/', chunk_size=100, customize_loader_params={
-    'num_workers': 4,
+    'num_workers': 2,
 })
 
 char_index = other_infos['char_2_index']
@@ -38,12 +39,18 @@ val_loader = all_loaders['val']
 test_loader = all_loaders['test']
 
 INPUT_SIZE = len(char_index)
-HIDDEN_SIZE = 100
+HIDDEN_SIZE = 150
+NUM_LAYERS = 2
 OUTPUT_SIZE = len(char_index)
 
-model = BasicLSTM(INPUT_SIZE, HIDDEN_SIZE, OUTPUT_SIZE)
+model = MultiLayerLSTM(INPUT_SIZE, HIDDEN_SIZE, NUM_LAYERS, OUTPUT_SIZE)
 criterion = nn.CrossEntropyLoss()
-optimizer = optim.SGD(model.parameters(), lr=LEARNING_RATE)
+optimizer = optim.Adam(model.parameters(), lr=LEARNING_RATE)
+
+
+
+
+
 
 # Remove old log
 nohuppath = os.path.join(PARENT_PATH_TO_SAVE_RESULT, 'nohup.out')
@@ -73,8 +80,8 @@ trainer = PA4Trainer(model, criterion, optimizer, all_loaders, {
     'print_every_n_epochs': 5,
     'validate_every_v_epochs': 5,
     'verbose': True,
-    'num_epochs_no_improvement_early_stop': 5,
+    'num_epochs_no_improvement_early_stop': 3,
     'use_early_stop': True,
-    'pass_hidden_states_between_epochs': True,
+    'pass_hidden_states_between_epochs': False,
 })
 trainer.start()

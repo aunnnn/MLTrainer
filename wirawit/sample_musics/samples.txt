@@ -1,0 +1,68 @@
+m1 = sample(model, T=None, max_length=2_000)
+
+X:1
+T:Che Borka Mougher of the Donne
+Z:id:hn-polka-83
+M:2/4
+L:1/8
+K:D
+A>B cB|AB AB/c/|dB BA/B/|dB BA|BA Bd|ed BA|BA Bd|ef ed|ef ef/e/|dB BA|1 B2 AB:|2 BA AB||
+
+-----------------------------------------------------
+m1 = sample(model, T=1, max_length=2_000)
+
+X:00
+D:6 O, reptreet
+Z:id:hn-polka-66
+M:4/8
+L:1/8
+K:F
+EF/A/ AB|AB AB/A/|B/A/B/A/ GF|1 FG GE:|2 D2 DE||
+P:Cariatsins
+B2 ~B4|1 A2 A2:|2 BA Bd|fa/f/ ed|B2 Bc/B/|df ed|FG Ad|BA BA|DA AB:| d>BG | BG FA/B/|de AB/d/|fo ed|ef ef/f/|dB cA:|2 Gd B2:|2 BA DG||
+
+-----------------------------------------------------
+m1 = sample(model, T=0.5, max_length=2_000)
+X:13
+T:Call an Barusther, The
+T:Theen's Brog Frod and of the Rind the Cherom's Fentinn
+R:polka
+Z:id:hn-polka-73
+M:2/4
+L:1/8
+K:D
+dd dB|d2 dB/c/|dB cd|ed B2|dd BA|A>B cB|AG AB|cB AB/c/|dB AB/d/|ed cB/d/|fg fe|dB cB/A/|1 AG G2::|
+
+X:1
+T:Be so nom Bangis of tom the Corne to Malse #158
+Z:id:hn-polka-89
+M:2/4
+L:1/8
+K:A
+A>A B/A/G/A/|BA BA/B/|dB dB/B/|AB cB/A/|GA Bd/e/|dB B/A/G/A/|1 AG GB/c/:|2 BG GA||
+P:variation 29
+D:D Danne
+Z:id:hn-polka-86
+M:2/4
+L:1/8
+K:D
+de dB|AB cB|AB BA|BA BA|BA Bd|ef/e/ dB|1 BA AB/c/:|2 BA Bd|e2 ef|ed e>f|ed cB|A2 AB/c/|dB AB/c/|ed cB|cA AB/c/|dB AB/c/|
+dB Bd/B/|dB BA/B/|dB AB/c/|Bd Bc/d/|eA cB/A/|BA GB/d/|ef ec/e/|fd dB|AB AG|
+AB AB/c/|dB AB|Bc AB/c/|dB AB/A/|BA BG/B/|AB cB/A/|BA Bd/e/|fd ef|fe fd|ef ed|e2 ed/B/|A2 AG||
+<end>
+
+---------------------
+T = 1
+lstm100adam0.001
+
+X:74
+T:Rechiay Larger
+R:polka
+D:Jee Kelley: It patey
+D:Cowil Fridge
+Z:id:hn-polka-65
+M:2/4
+L:1/8
+K:D
+FE FE/E/|DD B,E|DE FE|EA BG|ED D2|GB/d/ c/B/A|Bd ag|GF GG|AB/G/ AF/D/|G/A/ B/A/G | FG AGD|
+|: eA ff|AF Fd|A>B cd|ef/e/ dd|e2 ed|fe e2|e/f/e cB|AB/A/ GB|1 BA Ad:|2 g>e d>g||

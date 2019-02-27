@@ -28,9 +28,12 @@ class PA4Dataset(data.DataLoader):
             input_tensors[i, self.character_index[char]] = 1
             label_tensors[i, self.character_index[next_char]] = 1
                         
-        # How to handle the last chunk? Currently just all zeros.
+        # How to handle the last chunk? Currently will use '<' to maintain continuity
+        # (since last char of every files are '>').
         if i_chunk == self.num_chunks - 1:
-            pass
+            eof_i = len(cur_chunk) - 1
+            input_tensors[eof_i, self.character_index['>']] = 1
+            label_tensors[eof_i, self.character_index['<']] = 1
         else:
             # Last char will have first char of next chunk
             last_i = len(cur_chunk) - 1
