@@ -3,11 +3,24 @@ from LSTM import LSTM
 import Dataloader
 import os
 import pandas as pd
+import sys
 
 def train(model, criterion, optimizer, inputs, targets, val_inputs, val_targets, output_dir, num_epochs=5):
+    val_losses_file = "./output/{}/validation_loss.csv".format(output_dir)
+    train_losses_file = "./output/{}/train_loss.csv".format(output_dir)
+    
     output_path=os.path.join('output',output_dir)
     if not os.path.exists(output_path):
         os.mkdir(output_path)
+        
+    with open(train_losses_file,"w") as f:
+        f.write("epoch,minibatch,loss\n")
+    f.close()
+    with open(val_losses_file,"w") as f:
+        f.write("epoch,minibatch,loss\n")
+    f.close()
+
+    
     
     N = 50
     N_minibatch_loss = 0.0
@@ -16,8 +29,6 @@ def train(model, criterion, optimizer, inputs, targets, val_inputs, val_targets,
     total_loss = []
     avg_minibatch_loss = []
     val_losses = []
-    epochs = []
-    minibatches = []
     val_count=0
     save_state_dict=None
 
@@ -49,6 +60,10 @@ def train(model, criterion, optimizer, inputs, targets, val_inputs, val_targets,
                 N_minibatch_loss /= N
                 print('Epoch %d, average minibatch %d loss: %.3f' %
                     (epoch + 1, i, N_minibatch_loss))
+                
+                with open(train_losses_file,"a") as f:
+                    f.write("{},{},{}\n".format(epoch,i,N_minibatch_loss))
+                f.close()
 
                 # Add the averaged loss over N minibatches and reset the counter
                 avg_minibatch_loss.append(N_minibatch_loss)
@@ -63,9 +78,10 @@ def train(model, criterion, optimizer, inputs, targets, val_inputs, val_targets,
                         val_loss += criterion(val_outputs, val_targets[v]).item()
                 val_loss/=len(val_inputs)
                 val_losses.append(val_loss)
-
-                epochs.append(epoch+1)
-                minibatches.append(i)
+                
+                with open(val_losses_file,"a") as f:
+                    f.write("{},{},{}\n".format(epoch,i,val_loss))
+                f.close()
 
                 print('Epoch %d, average validation loss: %.3f' %
                     (epoch + 1, val_loss))
@@ -91,11 +107,29 @@ def train(model, criterion, optimizer, inputs, targets, val_inputs, val_targets,
     train_loss_df = pd.DataFrame({'loss':avg_minibatch_loss})
     val_loss_df = pd.DataFrame({'loss':val_losses})
 
-    val_loss_file = "./output/{}/validation_loss.csv".format(output_dir)
-    train_loss_file = "./output/{}/train_loss.csv".format(output_dir)
     #scores_file = "./output/{}/scores.csv".format(model_name)
 
-    train_loss_df.to_csv(train_loss_file)
-    val_loss_df.to_csv(val_loss_file)
+    #train_loss_df.to_csv(train_loss_file)
+    #val_loss_df.to_csv(val_loss_file)
     
-    
+    return train_loss_df, val_loss_df
+
+if __name__ == '__main__':
+	if len(sys.argv) != 4:
+		print("need 3 arguments: epochs output_dir hidden_dim")
+		sys.exit()
+
+	# run train
+	model = LSTM(hidden_dim=int(sys.argv[3]))
+	criterion = torch.nn.CrossEntropyLoss()
+	optimizer = torch.optim.Adam(model.parameters())#, lr=learning_rate)
+	EPOCHS = int(sys.argv[1])
+	output_dir=sys.argv[2]
+
+
+	dataloader = Dataloader.Dataloader()
+	train_inputs,train_targets = dataloader.load_data('../pa4Data/test.txt')
+	val_inputs,val_targets = dataloader.load_data('../pa4Data/val.txt')
+
+
+	train(model, criterion, optimizer, train_inputs, train_targets, val_inputs, val_targets, output_dir, num_epochs=EPOCHS)
