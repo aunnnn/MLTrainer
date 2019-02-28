@@ -26,12 +26,15 @@ class LSTM(torch.nn.Module):
         self.hidden = (torch.zeros(self.num_layers, self.batch_size, self.hidden_dim),
                 torch.zeros(self.num_layers, self.batch_size, self.hidden_dim))
         
-    def forward(self, input):
+    def forward(self, input,computing_device):
         # Forward pass through LSTM layer
         # shape of lstm_out: [input_size, batch_size, hidden_dim]
         # shape of input:  (seq_len, batch, input_size)
         
         seq_len = input.size()[0]
+        
+        self.hidden = self.hidden.to(computing_device)
+        input = input.to(computing_device)
         
         lstm_out, hidden = self.lstm(input.view(seq_len, self.batch_size, -1),self.hidden)
         

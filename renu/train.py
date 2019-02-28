@@ -59,7 +59,7 @@ def train(model, criterion, optimizer, inputs, targets, val_inputs, val_targets,
             # Zero out gradient
             optimizer.zero_grad()
 
-            outputs = model(src)
+            outputs = model(src,computing_device)
 
             loss = criterion(outputs, trg)
 
