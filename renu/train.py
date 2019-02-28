@@ -92,8 +92,9 @@ def train(model, criterion, optimizer, inputs, targets, val_inputs, val_targets,
                 val_loss=0.0
                 with torch.no_grad():
                     for v in range(len(val_inputs)):
-                        val_outputs = model(val_inputs[v])
-                        val_loss += criterion(val_outputs, val_targets[v]).item()
+                        v_src, v_trg = val_inputs[v].to(computing_device), val_targets[v].to(computing_device)
+                        val_outputs = model(v_src,computing_device)
+                        val_loss += criterion(val_outputs, v_trg).item()
                 val_loss/=len(val_inputs)
                 val_losses.append(val_loss)
                 

@@ -33,7 +33,7 @@ class LSTM(torch.nn.Module):
         
         seq_len = input.size()[0]
         
-        self.hidden = self.hidden.to(computing_device)
+        self.hidden = (self.hidden[0].to(computing_device),self.hidden[1].to(computing_device))
         input = input.to(computing_device)
         
         lstm_out, hidden = self.lstm(input.view(seq_len, self.batch_size, -1),self.hidden)
