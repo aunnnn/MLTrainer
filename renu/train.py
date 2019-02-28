@@ -6,6 +6,21 @@ import pandas as pd
 import sys
 
 def train(model, criterion, optimizer, inputs, targets, val_inputs, val_targets, output_dir, num_epochs=5):
+    # Check if your system supports CUDA
+    use_cuda = torch.cuda.is_available()
+
+    # Setup GPU optimization if CUDA is supported
+    if use_cuda:
+        computing_device = torch.device("cuda")
+        extras = {"num_workers": 1, "pin_memory": True}
+        print("CUDA is supported")
+    else: # Otherwise, train on the CPU
+        computing_device = torch.device("cpu")
+        extras = False
+        print("CUDA NOT supported")
+    model = model.to(computing_device)
+    print("Model on CUDA?", next(model.parameters()).is_cuda)
+    
     val_losses_file = "./output/{}/validation_loss.csv".format(output_dir)
     train_losses_file = "./output/{}/train_loss.csv".format(output_dir)
     
@@ -37,13 +52,16 @@ def train(model, criterion, optimizer, inputs, targets, val_inputs, val_targets,
 
         for i in range(len(inputs)):
             model.train()
+            
+            # Put the minibatch data in CUDA Tensors and run on the GPU if supported
+            src, trg = inputs[i].to(computing_device), targets[i].to(computing_device)
 
             # Zero out gradient
             optimizer.zero_grad()
 
-            outputs = model(inputs[i])
+            outputs = model(src)
 
-            loss = criterion(outputs, targets[i].long())
+            loss = criterion(outputs, trg)
 
             # Backward pass
             loss.backward()
