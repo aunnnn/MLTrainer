@@ -1,14 +1,16 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 
-def plot_losses_from_files(output_dir,files,start,plot_title="LSTM Performance"):
+def plot_losses_from_files(output_dir,files,start=0,end=None,plot_title="LSTM Performance"):
     legend_list=[]
     for loss_type in files:    
         df = pd.read_csv(files[loss_type])
         y = range(len(df))
         loss = list(df['loss'])
+        if not end:
+            end=len(loss)
         if loss:
-            plt.plot(y[start:],loss[start:])
+            plt.plot(y[start:end],loss[start:end])
             legend_list.append(loss_type)
         
     plt.legend(legend_list)
@@ -18,13 +20,13 @@ def plot_losses_from_files(output_dir,files,start,plot_title="LSTM Performance")
     plt.savefig("./output/{}/{}.png".format(output_dir,"lossestest_plot"), dpi=80)
     plt.show()
     
-def test(model, criterion, inputs, targets, output_dir):
+def test(model, criterion, computing_device, inputs, targets, output_dir):
     model.eval()
     total_loss=0.0
     
     for i in range(len(inputs)):
 
-        outputs = model(inputs[i])
+        outputs = model(inputs[i],computing_device)
 
         loss = criterion(outputs, targets[i].long())
 

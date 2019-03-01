@@ -29,13 +29,14 @@ class LSTM(torch.nn.Module):
     def forward(self, input,computing_device):
         # Forward pass through LSTM layer
         # shape of lstm_out: [input_size, batch_size, hidden_dim]
-        # shape of input:  (seq_len, batch, input_size)
-        
+        # shape of input: (seq_len, input_size)
+     
         seq_len = input.size()[0]
         
         self.hidden = (self.hidden[0].to(computing_device),self.hidden[1].to(computing_device))
         input = input.to(computing_device)
         
+        # shape of input:  (seq_len, batch, input_size)
         lstm_out, hidden = self.lstm(input.view(seq_len, self.batch_size, -1),self.hidden)
         
         # TODO detach hidden state from previous calcs?? 

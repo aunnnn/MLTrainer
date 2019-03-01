@@ -45,6 +45,7 @@ def train(model, criterion, optimizer, inputs, targets, val_inputs, val_targets,
     avg_minibatch_loss = []
     val_losses = []
     val_count=0
+    min_val_loss=100
     save_state_dict=None
 
     for epoch in range(num_epochs): 
@@ -104,11 +105,14 @@ def train(model, criterion, optimizer, inputs, targets, val_inputs, val_targets,
 
                 print('Epoch %d, average validation loss: %.3f' %
                     (epoch + 1, val_loss))
-
+                
+                if val_loss<min_val_loss:
+                    save_state_dict = model.state_dict()
+                    min_val_loss=val_loss
+                    print('saving dict when val loss is:',val_loss)
+                
                 # early stopping
                 if len(val_losses)>=2 and val_loss>val_losses[-2]:
-                    if val_count==0:
-                        save_state_dict = model.state_dict()
                     val_count+=1
                     if val_count==5:
                         break  
@@ -147,8 +151,8 @@ if __name__ == '__main__':
 
 
 	dataloader = Dataloader.Dataloader()
-	train_inputs,train_targets = dataloader.load_data('../pa4Data/test.txt')
-	val_inputs,val_targets = dataloader.load_data('../pa4Data/val.txt')
+	train_inputs,train_targets = dataloader.load_data('../pa4Data/test.txt',chunk_size=200)
+	val_inputs,val_targets = dataloader.load_data('../pa4Data/val.txt',chunk_size=200)
 
 
 	train(model, criterion, optimizer, train_inputs, train_targets, val_inputs, val_targets, output_dir, num_epochs=EPOCHS)
