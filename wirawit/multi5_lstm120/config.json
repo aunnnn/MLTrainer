@@ -1,0 +1,14 @@
+{
+    "model": "MultiLayerLSTM(\n  (lstm): LSTM(93, 120, num_layers=5, batch_first=True)\n  (h2o): Linear(in_features=120, out_features=93, bias=True)\n)",
+    "criterion": "CrossEntropyLoss()",
+    "optimizer": "Adam (\nParameter Group 0\n    amsgrad: False\n    betas: (0.9, 0.999)\n    eps: 1e-08\n    lr: 0.001\n    weight_decay: 0\n)",
+    "path_to_save_result": "./",
+    "session_name": "multi5_lstm120",
+    "n_epochs": 300,
+    "print_every_n_epochs": 5,
+    "validate_every_v_epochs": 10,
+    "verbose": true,
+    "num_epochs_no_improvement_early_stop": 3,
+    "use_early_stop": true,
+    "pass_hidden_states_between_epochs": false
+}

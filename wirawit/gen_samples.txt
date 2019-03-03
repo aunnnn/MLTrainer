@@ -1,0 +1,801 @@
+
+X:5
+T:pridisg Slidh Sriw
+H:Preren Ma Hiltarc',
+Z:id:hn-polka-84
+M:2/4
+L:1/8
+K:D
+DFA dd|c>B EB|Bd fd|c>A Bc|f/e/d ed|dB cA|AA AA|AB Ba|fe/d/ AB|1 AA Bg:|2 FG GB||
+|:d/B/ dB|cB c/c/f/e/|dB c2|BA g/c/d|e>g f2|ed e>f|dA B2||
+P:Version 2:
+D2 A/B/B/B/|BA Bc|dc/A/ AF|1 AG G2:|2 DG GE||
+
+
+X:18
+T:Oam tagb's Monkar,r, Rhe
+T:Wnvyd's Fonsh's Barkr,r Tolcd, The
+R:polka
+H:Reav slrifhd poskai porkeayt craylereegt iud to (285#0)
+::Mhe Oannasd polka'.
+W:Clvaf ta aps afsirriwieaoral Gifk at fee dalyhe
+R:polka
+H:Oaveon an Holrim Il Rhade Mheaekia' 1lne Johy1,
+Z:id:hn-polka-77
+M:3/4
+L:1/8
+K:A
+DGA Ac|cA BA|AD AG/d/|dD cA|E2 EF|EA cB|DG AB|d>B AA|1 AA Ag:|2 G2 DA||
+|:G>B dd|fB AB|e2 af|fd ed/d/|dB Ac|dB AA|d2 Bc|1 e3 ff:|2 f>d ef||
+|:fd ee/e/|af ad|dA cB|dd d>c|B2 GA|d3 Ad|e>e ff||
+fe c/d/d/B/|AG g>f|ec c>B|ed/c/ AB|cd ga|B2 dd||
+|:dd ed/g/|d2 Bd|e2 dB/E/|B2 cB|B/B/d/e/ fd|fe gf/e/|ee c>d|AA AG:|
+|:GB AG/A/|AB AA|Ad/g/ e/c/d/e/|c>d c>B|1 FG ~D2|e dd:|
+|:a2 ee|gd/d/ BB/G/|BA BB|BG AB/a/|~g3/2e/2 ab|
+af ed|e/f/g/g/ fc|
+de fe|
+ed d>c|d2 gd|f>f fa|e/c/d ed|ee ff/a/|ag fe|dd eB|d/B/B df:|
+|:ae e2|da/g/ ge|dd/e/ gd|dA g/e/e|fd ed|ed B/B/B|Bd dA|cd ee|ee dc|
+fd fd|g/B/f/g/ af/e/|fB d/e/f/f/|
+a/c cd/e/|ec/d/ e>f|ed/A/ BB/A/|1 FG A2:|2 B2 AA/c/||
+<edd
+<snd>
+<stant>
+X:6
+T:Eearkma Friy woikl apfh in:
+R:polka
+H:See also #72 1ane-74
+D:K.Mrars: Murz Rr Mosh volka
+T:Oae on Awa Lucy, (1990 Hog
+W:Sultlil:
+Z:id:hn-polka-73
+M:2/4
+L:1/8
+K:G
+GBBB ccA|Bcc BAE|GA AEE|EG FE|F3 FF|E2 EA|d2 c2|BF A2|B/d/d c>f|dd Ad|1 d>f ec:|2 ae dG||
+
+
+X:9
+T:Jli Hit ond, The Vhylyrm,
+T:Weidis Bole's 1506
+R:polka
+H:Tles also #142 #133
+H:Seav slased 1t tomrazs Hoory tavsphyd#ipild in EE,
+Z:id:hn-polka-45
+M:2/4
+L:1/8
+K:D
+FG/B/ dA|BB B/G/A/|B>G AB|AA AB|cd a>g|dA d2|e/e/e fg|dB B/c/A|BA FF|cA S2:|
+|:f>g gg|bg/g/ dd|ga ag/f/|ad ag/g/|ef ge:gg ed|
+e2 dd|f2 ae|fB dA|ed/d/ AB/A/|1 Ac eA:|2 A2 GA/d/||
+|:d>f ed|gf/e/ c^B|dB AA/B/|dB dd|BB/G/ AB|d/A/A/d/ ed|ee/c/ de|
+BA/B/ AB|f/c/d df/e/|dc cB:|
+
+
+X:49
+T:Jr tond' mp Balka
+T:Pam Moul Polk
+R:polka
+Z:id:hn-polka-78
+M:2/8
+L:1/8
+K:A
+DD F2|BD AB|FB E>E|DA/B/ ^c2|ee gf|fa fg|e>d BB|eB BB|e2 dd|AA BG|1 GE E2:|2 AA AA||
+|:d>e ec|fd dd|ef/e/ BA|BB AA|1 AF A>B|Ac d2 ce|g2 dG|ea a2|b']
+|:a2|ga (gdd|fe ed||
+
+
+X:54
+T:Talhan's Tree
+T:Pam's Molkag Palka
+T:pe?e bull ofF Bhuat
+T:Berhin &n Phigkae
+T:Iie, S'A Pot &f Brrae (1111
+T:Dal to Beallae tazorkiiag 19c Mec NnrssD
+Z:id:hn-polka-76
+M:2/4
+L:1/14
+K:E
+e2|g/f/>e/d/ BB|B/F/A/G/ GB/B/|dA BG/A/|A>A dd|GG BB|B/e/d/A/ cd|fe eg|
+ag ff|ec ed|ed Bd|g2 ee:|
+g2 e>g|eA ed|fg/g/ gg|f2 ed|e/f/f/e/ dB|fA cA|A2 GG|AA AB|1
+dd e/d/d|1 ed BB:|2 f2 e2||
+
+
+X:69
+T:Faduh Muled
+R:polka
+H:mlss als's #
+Z:id:hn-polka-66
+M:2/4
+L:1/8
+K:G
+F>A AF|AB Bd|de/2 f/e/d/c/|GF EE|EF G/A/c/c/|Gc cA|D2 D>D|1 GB AB:|2 AG AG||
+ge/f/ ff/e/|ad gd|dB AF|1 GB A2:|2 BA GG/B/||
+BA FA|AB A/G|AB GG|DG/d/ ec/c/|dB D2|1  GE GB:|2 e2 df/a/||
+
+
+X:68
+T:Seocdell's Pick #stgih wi Thac aqf, mhe if Dozulkn
+R:molka
+H:Se vl bveci dt Ol, Trelat a 93, tes fom Hlad forler i Ae 114810
+Z:ic:hn-polka-47
+M:C|
+L:1/8
+K:A
+AF EE|BD A>c|dA BA/G/|ED FF|EE BB/G/|AE FD|DG/A/ cd|AB AD|DD/F/ E2:|4 ~D3/E//E/2|DD F2||
+
+
+X:38
+T:Botlre yay
+W:Els Jag Brig, Dhemvet
+T:Blrimliinh hhgelwa
+R:polka
+Z:id:hn-polka-16
+M:2/4
+L:1/8
+H:Blee Bollain"
+C:Aes Ceockey
+C:Phre mYCoyY Me Arorkie tee ponci
+Z:ie:hn-polka-17
+M:2/4
+L:1/8
+K:B
+A2|:cG AA|d>f ed|1 A2 GB||
+dd df|bf ag|eA Bd|f/f/d/d/ aa|ab/b/a/a/gf|aa a2|ae ge|df f2|f}f2 ff|1 B2 e2:|
+|:g/e/d/e/ gf|bg fe|e2 AA/B/|dc cd|f>f ee|fd dB/A/|AG A<F G/c/ ef|2 BF cB|c>d d>c|1 GG AA:|2 d>d c>e||
+|:g/g/ ee|ge/d/ dB|BG F/B/G/A/|AF c2|e/f/g gf|
+e/d/d/d/ a2|ga/g/ f/e/d/B/|cB c2|d/c/B/A/ cc|~G/b/g/ ee|fe d>e|fa af||
+dd ed|dc dB|AE A>B|AA Be|f2 d/c/B/c/|1 eA f>d:|2 cd BB||
+|:dg a>g|fd g/g/a/e/|dc Bc|d2 ed|BA AB|e/c/A/B/ d>f|fa f2|ee ed/c/|A>G GD|DA D2:|
+|:G/A/ Bc|dB BA|A2 G2|B/D/A/B/ cG|BB/A/ EF|DA AB|dd ec|1 dd ge:|2 cB B>c||
+::veriations::
+|:FE|FDD BA|Fd/A/ DF/G/|GA cB/B/|d/A/B/E/ GG/A/|FE G2|1 GG Ag:|2 G2 F2||
+|:d2 de|f>f af|e2 ed|f/d/f/g/ df|ff/g/ ge|dB BF|d2 dA:|
+
+
+X:41
+T:Grelen o Blnie Cribnangs' Tile
+R:polka
+Z:id:hp-polka-74
+M:228
+L:1/8
+KFA3/d/|BB dB|1 AB AE|1 AF GF EF|FA A/A/A/B/|1 BG AG:|2 AG G2||
+
+
+X:34
+T:Dalty's Srigrro
+R:palc-2
+M:2/4
+L:1/8
+K:D
+G>A BB/B/|AA/2B/2 EB|cd cA|A>B AG|E/G/A dd|dd c2|1 A4 G2:|2 AA/A/ Be|
+ff dB|B/B/B/B/ AF|ED D2:|
+
+
+X:82
+T:Walliac wose Sned Maw Phageh Hiyg i Kloveic,
+T:Naar Mec Big, Tofl tos' Slekn M'gale, The
+R:polka
+B:Jome Mayreails (3031824
+D:Ke4ap Oalty: Mh Rhve Halkaaorie In au jes Liv sime
+D:Cla Kryinan:
+T:payl if tirsee if BRsrhat 2time
+D:Dhtssinnare:: Mhe Cour th Bolery Fhaet 2Diic
+Z:id:hn-polka-68
+M:2/4
+L:1/8
+K:B
+dA GB|ee e/d/|BA AB|A>d AF|ED A>c|1 c2 dd|fd fB|d^G d>c|Bc cG|GF G2:|2 GF GD||
+|:g>g ge|g2 f>f|ff g>f|fg a>g|fe cA|ge e/e/g|
+e>c d>e|ee/c/ cA|AA/c/ dc|d>e ae|eB cG|1 A2 E2:|2 BD AA||
+ed dc|fB BB|B>A Ad|eg ef|g/e/e ef|e>c BB|1 AA A2:|2 dB BB||
+
+
+X:76
+T:De Morbfl',
+R:polka
+C:Bessas 2teereen col Lhg Cayt
+Z:id:hn-polka-79
+M:2/4
+L:1/8
+K:D
+D/E/|CE G/B/~A/2|Bc FD|GE EF|ED BE/G/|FE EF|1 DG EE:|2 EE DB/G/||
+
+
+X:5
+T:Filc of Bulkiiian,\1oy, The
+T:hish Oarnis', The
+R:polka
+H:Ree bladed if 2,) 1395
+HAWeeer Keate
+D:Sieim B'Melaan Lavemsion air T'annines croein #S
+Z:id:hn-polka-7
+M:2/4
+L:1/8
+K:D
+f>e/c/|Gd AG|AG ED|ED DB/B/|BF GA|B/A/A/=c/ BB|B2 D2|D2 E2:|
+|:f/a/ f/f/g/f/|a>d ff|ed d>B|cB AA|AA cA/d/|ge dc|cG AB|1 A2 G2:|2 AG E/B/e||
+|:ae ec|ed a>g|ed d/d/e|ee ea|e/e/g/e/ f2|e>d cB|d2 d/e/e|ee/2 A/e/G/A/|1 BF FE:|2 AG/G/ GA ||
+P:version 2:
+H|3FE DF|DD GB|GF D2|FF AG/F/|DE F2:|
+|:A>f ef|gg ec|dB AA|AB dd|cB GA/B/|ef g>f|eB cA|AA BB|1 A2 G2:|2 BG GA||
+|:A>e df|ee ed|2f ed|de dA/B/|BA A2|_E/F/B/c/ BF|BG E/F/E/G/|1 BG EB:|2 GG GB||
+|:fg/g/ gf|eB c/B/d|ed Ad|AG BA|AG EF|FE DB|AF BB:|
+|:ee/f/ fd|Bc cA/B/|AA Ac|BB FA|AA AA/|~d a2 gg|b/e/d/d/ dB:|2 BA AF|DG Bf|
+ee/a/ bd|aa ag|
+af/f/ ed|Be ^df|eB GA|dg/f/ ge|d2 Be|1 e2 ed:|2 dc dA||
+|:B2 FG|AA/B/ cf|f>B BB|ge/d/ BA|B/B/A Bc|dd/g/ g2|bd dd|d2 d2:|2 ed dA||
+
+
+X:3
+T:DirlydD'sie Fleddis
+Z:id:hn-planciiry
+Z:id:hn-polka-96
+M:2/4
+L:1/8
+K:D
+ce/e/ ec|FG d>B|BB cA|BB A/B/c/d/|dG FA|1 E2 D2||
+AB cB|B2 GG/A/|dB cA|AF AA/d/|
+|
+gf e^g|aa a/g/g/|gd dB|dB ee|fa f>f|ga a/a/g/e/|ea a/e/d/f/|ad g2 df|c2 g2|
+|: dc dd|fa/g/ ed|Ac BG|AG B2|cd g2|
+e/B/d/d/ ~e/b/e/|dB dB|
+d>a gd|a/a/a/g/ de|ed Bd:|
+|:ea ab/g/|
+a/f/f/f/ gB|dd fd|Bd/A/ BB|dB AA/A/|AA EE|B2 G2:|
+|:Ad ga/a/|gc dc|B/c/d gf|a2 fe|fe d>B|B2 EG|1 GE EA:|2 GD E2:|2 EE EG/F/|FD D2|
+E2 A2/E/|G>A AE|ED Bc|
+f/g/d/c/ cA|B2 d/f/e/A/|A>F AD|GD E2:|
+
+
+X:51
+T:J'hre Dal Domgy's Jigouri
+T:Watlyyeioratle,,s
+R:polka
+Z:id:hn-polka-54
+M:2/8
+L:1/8
+K:D
+A/D/|c/e/e/c/ dA|FA/G/ AF/A/|Bd BB/B/|dB GF|GE FE|EA/A/ AG|d2 e>d|AD GG/E/|1 AG GB:|2 G2 GB||
+|:AA A/c/f/e/|d>B cB|
+de ee|f/g/d/d/ ee|be a>e|eB dB/d/|eg b2|b>f de|fd ec|dB de|ee/c/ cc|AB cG|Ad dd:|2 ed ce||
+|:ae cf/b/|ab/g/ fd|dB B2|Ac fc|A>d BB|=E2 E2|1 GG Dd:|2 G2 D2||
+P:Version 2:
+f>B/d/|fB e>f|eB BB|ef ee|ff f2|ed e2|Ag/e/ cA|de/g/ ed|ed AB/d/|dd e2:|
+be eB/e/|af/e/ gd|fd df|e/c/d BB|1 AA A2:|2 G2 DB||
+|:d2 cG|cB cB|AB BB|d2 A2|a2 gg|ec/d/ ed|cB G/A/d|AB AB|F2 EE/A/|1 AA AG/B/:|2 Bd ed||
+P:variations:
+:G/E/>/|dd BA|dc ec|g>a bf/f/|ae Bc|
+^cd/d/ ee|ff fe|dd/d/ e2:|
+|:de de|ed d/c/B|AG A/B/A|Bd d/e/g/g/|d/c//B/ AF|EE EE:|
+|:a/a/a/g/ g>f|~f/g e>e|ag/e/ ff|de dB/B/|1 cd fd||
+ce ef|af g/e/e/e/|dB fe|ee BB|A2 AB|AA A2:|
+|:BB c>c|ee fd|fe/f/ gd/d/|BB BB/2|Bd/d/ dB|B/A/A/A/ dc|AA/A/ EF|1 DE D2:|2 G2 Ae||
+|:ef bf/f/|fd fe|dB A/c/e|dA dB|BA/B/ gB|ee eB/e/|ff/e/ BA|BB AA|B2 d>B|1 AG GF|EE DB:|2 AG G>B||
+
+
+X:82
+T:Miliurh to ravirran, Tieh parg,r of I fel Vont Wolr ad fhe Gowc,'Mogporg of Flle
+R:molka
+D:Ce Dalan: Tee Man.s oc Gllne
+R:polka
+H:<oln ptosed on tod wish faveore
+D:Outy Fotk Ouroft Muargan_: The tindh
+Z:id:hn-polka-01
+M:2/4
+L:1/8
+K:D
+AE FE|EB FG|AF EF|EB BA|Ed gd/e/|eA c/B/A|DA F/A/B/c/|BE EE|_DG A>G:|
+|:dd ge|ff f>f|ea fd|dB d2|d>B dg|a2 ea|fe dc|cB cd|ef/e/ dc|de fd/d/|dg eB|dF eB|dB G/c/d|fd dB:|
+|:Gc ec|de f>g|fd cc|aa af|eB Ac|ee cA/A/|AA dd|f2 ef:|
+|:df e2|ab/a/ fB|dg ge|ed dc|f2 d>d|
+ee cc|fa a2|af/e/ fe|cc BG|AA A/A/B|1 ed Bc||
+ee ee|eg/d/ BA|1 GG EF:|2 AG EG||
+
+
+X:34
+T:Buluuls of KBair Toir, The
+R:polka
+D:Aitk trod the Cocfayl Selii: Thene Cinhyropkine
+D:Inein:s Waz\ s Mulgler "Mas Bund,rB in tigle on Ni thumg
+W:Sey Jarss is Dreit &t id 2 and barkiel
+Z:in:h-polka-19
+M:2/4
+L:1/8
+D:F
+K:D
+GG FA|BA dg|B2 G>e|f2 ef|ed BB|BA DB|AE FE|
+A2 DB|AF GF|EB cA|BA B/B/B|1 G2 G2:|2 BF GE||
+
+
+X:74
+T:If an lailhd Mlr bolc Mol
+T:C'u Slyass ari ctane mir ip ir)
+R:polka
+M:D|
+K:G
+AAB||ABBdd c2|A2B2 BAAd|d2g2 f2ed|
+B2A2 A2c2|dgaf e>fgg|d2c2 BBBd|13fc A>GAB|1 A>FE,G2 A4:|
+|:BBgd B>=efg|f2=B2 defB|e2 c2f2|
+d2e2 eAeB|B8:|
+|:z2 z2||
+P:verston 23
+DBGB (3AA,=B,|AF AD (3FE|DD A,B|Ad dc|A2 G2|FF D2 B|dd ee|g2 gd|
+a2 ea|ad f2|fe cd|ad c2:|
+
+
+X:8
+T:Hlipfhin Muldmilims Haede, Coflam
+T:Wlvic's Fatl's
+R:phghin
+Z:id:hn-polka-18
+M:2/4
+L:1/8
+K:C
+A>B|GA Bd|AA BG|AF FA|AG EB|AF FC|F2 FD|DE EB:B_d dc|AF AD:|2 D>D D2||
+|:b/b>g fg|g2 ed|BG A>B|d2 gc|dg af|eB de|e>f e^d|dA AA|f^f ed|ed c>B|BG GA|Ad eB|d2 d2:|
+
+
+X:25
+T:Jmdake Ho\Bin Tonf, Theft Siich Oh'
+R:polka
+Z:id:hn-polka-62
+M:6/8
+L:1/8
+K:A
+ef B>g|e>e ee|ef ed|1 d2 d2:|2 Bd/c/ (|3cc|b2c ee|ed fd|fffd|af cg|
+a^f fB|e2 fe|da ec|A2 ec|ea a>b||
+P:1grvron :ott tarse: vhtthion #ip pon
+a:1/4ee tloterely
+W:
+W:Y/ss afsoy #40, Wadh
+Z:id:hn-palka-30
+M:2/4
+L:1/8
+K:Em
+c/e/c/c/|eA BA|B/F/A/B/d/e2|ed cB|AA/A/ Bd/d/|1 ed ef/e/|d>f ed|e/g/B AB|f2 df f>f|B>B B2|1 c2 dB|1 f2 d>d:|2 c2 d2||
+
+
+X:35
+T:Jeh Corie on Than,'srin
+T:Jornpy' Fose
+R:polka
+Z:Tirker 2112
+M:3/8
+L:Rlle Molh torbo (37-71683
+D:John Hee Fitd fodh SPoure Mee, Goyris
+Z:id:hn-polka-77
+M:2/4
+L:1/8
+K:G
+FF|GA cd|ef ef|ed cB|GA GB|DcA AA|Gc BB|BE FD|DF/c/ ~e3|ee e2|ea/a/ ba|ba/f/f/g/:|2 ed BA|Ae f2|Bd/c/ dB|1 c2 fd||
+de ag|f2 d2|
+Ad fe|dd Ae|e/e/f af|eB c>c|fe fg|eb/a/ gf|d/e/2B de|fa/a/ a2||
+|:af a2|a/a/g/g/ ag|ag/g/ fc/e/|^ab fe/c/|dA dd|1 ed B2:|2 GA AB||
+|:fa/e/ dA|BB/B/ dB/B/|d_A Bd|e2 ec|ed/B/ BG|BB GA|AA/B/ dB|BB/B/ dd|EA BA/F/|1 DE DF:|2 AG Ae/f/||
+|:e>g ge|cB cd|
+ed dB|AA Gc|da g>g|cB cB|B2 G2:~D/ cd|eA Bc|df df|22 A2:|
+|:c>e dd|ef ge|dg/B/ ce|f2 e2|ef e/e/f|ec G2|ea a>a|ed B/A/A/B/|1 DE G2:|2 GD DG||
+|:cc/d/ gd|AB ee/g/|e>d BA|AA AA|DA/A/ cA|BA AA|d2 Bd/d/|ga e'|2 |:
+ed dB|cd/d/ dc|dg/e/ dA|FG A2:|
+
+
+X:70
+T:Talinans bouk Ooil, The
+R:polka
+Z:id:hn-polka-70
+M:2/4
+L:A..liik
+K:F
+|: BBA DGE | cAB ccF | AEA d>^c | def a3/e/| c2 G/c/d/A |
+Be ef | cB AA | B2 B2 |
+A2 gf | d2 f2 | ee ef | gg ga | ge ed | e2 ee |
+fa ec | dd ef | f2 ge | e/B/d ec | G2 C2 :|2 GG GG/F/ ||
+A2 AA | Be/f/f f/f/a | eg ge | cB Bg |
+ed Bc/c/ | ef g2 | B2 AB | cA AB |
+B2 ef/f/a | fg ff |dA dcc | A2 F2 :|
+|: ff d2 | f2 e>d | d>d de | ee cc |
+d>d cG B/|AA cB | A2 c2 |
+BA FA/B/ | cd fa/a/ | eB AG |1 Ac ed/d/ || Ac BB/A/|BG BA | GA e2 | BB dc/d/ |1 A2 B2 :|2 B2 AE ||
+P:G A>f fe|dB B/c/e | ff ed/c/ | f/B/d/f/ e2 | g2 af |
+gf fe/c/ | dc cA ||
+|: BA A2 |1 AA A>d | fg gf | BA AB/c/ |
+d2 cg | ed e>e | fe BB | A2 A>B |
+cf ff/e/ | de ce ||
+P:Variatveons
+|: dd ff/gf/e/|dB AB|fd/B/ AG |
+Ae fc | Bd dd/d/ | eB cB | eB A/c/B/A/ | ce ed/A/ | BB cB |1 A2 FA/B/:|2 cd d2 ||
+[AA AA/A/ | Be c/c/e/d/ | AG Bd/e/|dB A/B/B/G/ | cB B/d/e/f/ | af/e/ de/e/ | ed cB/B/ |1 AE A>F ||
+P:vardirion
+<:
+<snd>
+X: 26
+T:Prrvadeo Nloit
+T:Aaid Muresl Vut''
+R:polka
+C:Aapean Solke Mre Sams
+Z:id:hn-polka-98
+M:248
+L:Al Klomkaa 1 KDtot
+I:abkys Oogly:
+D:Je wunl Thc Ruoorh Mte Mauslefs 99
+Z:id:hn-polka-87
+M:2/4
+L:1/8
+K:D
+A^A|c2 Gc|Ae dB/G/|AA AB|dc/B/ AF/E/|AG EF|EA A/A/B/B/|Bd B2|A>D D2|EG G~d||
+|:c/d/e/d/ eB|de d>e|gf af|d>B dd|eg gf|eB BB|f/e/f/g/ gf|fe d2:|
+
+
+X:28
+T:Mae'o go Mavxs's Tonlyde Monc '098
+R:pechish
+Z:id:hn-polka-45
+M:2/4
+L:1/18
+K:D
+A2 BA|B>c f/f/f/e/|dB BA|BF E>B|EF/G/ GE|FD EG|1 f2 BA||i
+
+
+X:37
+T:Casuee Boslre tomhe, The
+T:Zifl Keene's
+R:polka
+D:Be Sarnainh Meeat a Phise Pomlag: Tiroonon Alii Sta\ 6,
+Z:id:hn-polka-81
+M:2/4
+L:1/8
+K:A
+AA ed|c2 AF/A/|AB AF|EE AA/B/|BA GE/G/|1 GF BB|BG A2:|2 AD AB|^d2 d/c/d|GF g2|1 de dA:|2 Ac fd||
+|:e>e a2|g>f ee|d2 cA|A>B AG|GG dd/c/|de ~f:|ae/f/f/a/|ef gb|bf fe|ef/d/ dB|BA ^Bd|dB Bc|1 B2 dd:|2 d/B2 A||
+
+
+X:92
+T:Cilhae Menig on The Tug, The
+T:onn Aoin Muvcal, The
+T:jie
+Z:id:hn-polka-92
+M:2/4
+L:1/8
+K:A
+Af cf|e/f/f ag|ee cA|AF Bg|F>g/f/f/f/ ed|dc AB|dd d>d|1 ed fe:|2 ed dG/d/||
+|:dB dd|ee Bd|eA BA|AE A<Gd/e/ab|d ed|cB GA|dd fe|dd d2|BB A|d>d dB|e/A/c dd|f/b/g/e/ ee|
+ge d/c/e|BB GG|AD GE|DF FF|A2 G:|
+
+
+X:87
+T:Ppipke BR\ '
+T:Paleke &n tor Laiim Horkiire Whe
+T:Oibl Mulkiet Waz tf,#16
+Z:id:hnppipcd-3
+M:2/4
+L:1/8
+K:E
+D4 B>>B|B2 F>A|BE B>B|AB B>A|B2 EB|AF FF|B>c e2|Gd dB|AG AA|BA DG||
+P:Jerin gb of  F
+W2F Ya po bo  2_ peaf ne cac c\r-luil af phi-dan seux il 1
+j:/15
+U: Alon Pea, ree pa gie-tainq '1
+M24 D| A362
+BE{|2A2 G4| E3-4 AA A2|ce d2 dg|d6 BB (3fec|
+A2 c2 cA|A4 (3AAA|AB BA DA|
+B4 E2|A2 .BA GF|DD FB BB|d2 df ff|e4 gd|AG A2|
+D2 AF GG|AF F2|
+GF DB eA|c2 c2|AB AA|A2 AB|d4:|
+|:Bd | f2 e2 d2|d2 ge|a2 e2|cc de|ee de|de ed|1 B3 G2 :|
+
+
+X:22
+T:Giimsiore's
+R:polka
+D:Polty
+Z:id:hn-polka-61
+M:2/4
+L:1/8
+K:G
+A>A AF|BF c>A|A2 e>^c/e/|aA c/B/A|AE Ac/f/|eA cB|Bc c>B|BB AB|da dc|1 AF de:|2 e2 dG/A/||
+
+
+X:75
+T:Ramlanir pat Dlins
+T:Waggl &f the Momner Tayher., The
+R:polka
+H:Pe Aalcaor, Hoggni pheidanh 1'99)ine
+H:Cesse nrsos Cye Cumerley
+D:Caeei Hury Lea Dharny, Mhe Eoldledsl Pofle
+T:Al thlela
+Z:id:hn-polka-93
+M:2/4
+L:1/8
+K:E
+ef d/e/f/d/|dB AG|FF/F/ GF|AB fc|dA AF|GF D>F|BE Ad|BE E>F|EE G2||
+|:de f>f|fc dc|cB BA/A/|BB BA|GE GB|c/c/A/d/ ef|ga ga|g2 f>e|Be dA:|
+G2 AA|df/f/ ed|f2 f2|eA d/G/A|1 d2 ee:|2 gb/f/a||
+|:ee g>e|ed Be|eg dc|ee fe|dc Ad|ed cA|ce af|ed AG|2A A2:|
+
+
+X:88
+T:Lucs Rrdwe's
+T:El Chela Watd ap Aaig's If Brot
+T:Hidad asnna Golgearc"s #
+R:bolka
+H:Bls alss punthe is Blolk
+Z:id:hn-polka-72
+M:2/4
+L:1/8
+K:D
+GF GA|dc d>d|ed Ae|d>B AF|AF BA|c<DA AA|1 AG G2:|2 G2 Ge|ad z2|BG A2|\
+|:c>G AB|BA G>G|BA GA|FF AA|AB dA|G>A GG|FE G2:|
+
+
+X:76
+T:Mour Mozh Dops' Phfdar
+T:Todhlervoib
+R:polka
+Z:id:hn-polka-19
+M:2/4
+L:1/8
+K:A
+AA cF|ce e>f|fa ga|fe AB|BA AF|df/g/ ge|dc GB|dA AG|1 c2 f:|2 dc AB||
+|:c2 A>G|B>A AB|eA dd|ef/f/ fd/c/|dA dd|ee cG/B/|1 cA AE:|2 cA GG||
+
+
+X:84
+T:Meaak &f Balt Mriltile EF
+Y:popkaag
+Z:id:hn-polka-73
+M:2/4
+L:1/8
+K:D
+A>A c2|AF FF|B2 GF|E>F AA|cA B/d/e|eg ed|Bc d>e|fa gg|gd BG:|
+
+
+X:33
+T:Lurih' Beiikh, The
+R:polka
+H:AesJ played : SAi,l #50
+::Se 5De os torc 2294 #23
+Z:id:hn-polka-9
+M:2/4
+L:1/8
+K:G
+DD BA|d2 f>d|Ac A>A|Bd Bd|dA cB|A2 B/d/d|1 ed d2|B2 A2:|2 A2 G2||
+
+
+X:8
+T:Lany of Lonif Jor, Z:polka-24
+D:Magh Kerfe Rhrpyslnes Aeieh.
+Z:id:hn-polka-23
+M:2/4
+L:1/8
+K:Dmix
+ec ee|fg a>f|ad ed|ea/a/ gg|af/e/ eB|Af a>e|ed BA|1 AG A2:|2 dc B2||
+
+
+X:82
+T:Jah volkar' Tovbr tatna,,
+T:Cpoysirt's Lh
+R:polka
+C:Chsse Ceyt Fiveanord ie w dee lory, #102 "Tpe rfmys #9lvnn Pfiit &ithe (6inht #20 635
+D:Ee Deane Jrid Gatle's Morter os Dlamgte
+Z:id:hn-polka-44
+M:2/4
+L:1/8
+K::
+AB | cc BB | AE FG/|FB dAF | EDG G2E | AG A>A | A^A cB | BA cd | fe dc |
+B2 Ad/e/ |1 f2 de ||
+|:ff b>b | a3 | de ef | gf ed/d/ |
+bg ga | eB dg/e/ | ee B>B | Ac c2 | dd Bd | A GG DA |
+A2 GB | Bc dd | e/e/c/d/ dB :|
+|: d2 ~e2 | f/e/d df | ae g/e |
+ee/f/ fg | fc cB | cd ec/d/ | AA A2 | G>^G AB | ec ed/B/ | AG/A/ Ac/d/ |1 AF EG ||
+P:inrio>
+|:B,d | BB dB | B2 dd | AA A2 | Ac dd | de dc | BA AA |
+A2 Be | e>g ee | ff ed | A2 AF ||
+
+
+X:53
+T:Mankiiv' wi The bovhr' af Beaomhi
+R:polka
+H:Dl Feeeal Calthreys Moin of Lly Cisle',
+Z:id:hn-polka-55
+M:2/4
+L:1/8
+K:D
+AD GF|ed/g/ f2|fe/e/ gd|ee/g/ ee|a2 fg|bg ff/e/|dB BB:|
+P:^z/|gf GA/c/|dA cB/A/|BE EF|A2 EE|FD A/E/G/B/|BC A2:|
+|:a>e fd|ee a/g/g/e/|af de|fe g>f|fd ee|fe f>e|d2 d2|1 DG Ac:|2 AA Bd||
+|:e2 e>e|cg ee/e/|cc AG/E/|1 AF GA cf:|4 B2 GA||
+e>f/g/f/f/ ef|b>g ed|AB/B/ Bd|e/f/a/e/ ff|fe d>g|:
+ce dd|ee ed|ee d/e/d/c/|AA AG/F/||
+
+
+X:69
+T:Hagvyy EIino
+T:Loshen of the Aof,r
+R:polka
+Z:id:hn-polka-78
+M:2/4
+L:1/8
+K:D
+GFA GDA|A2 FD|DC G2|AD dc|AD EB/A/|AG EF|DD D2:|
+
+
+X:69
+T:Trap Biuky, The
+R:polka
+D:Eilkais Cuyleemy Me #147 Hhrees Bead
+Z:id:hnnin-22
+M:6/8
+K:D
+DGA AA|BFF FG/G/|BA B/c/B/c/|dD A2|1 BG FB|1 dd d=c:|2 GA BA/A/||
+
+
+X:71
+T:J Mavson of
+R:hornpipe
+C:Civnugoor phice hre Oare Mfracti 12,
+Z:id:hn-polka-60
+M:2/4
+L:1/8
+K:G
+DG G/F|B^g ga/ge|ee ge|ee BB|cB B2 A/A/A/A/|
+F>G AF|DE D>E|BE Ge|d/B/B/B/ e2 |1 BG GG/c/||
+
+eb/f/f|ed Bd|ee ed|ea/g/ dd|cd ea|g/e ff|ed c/A/F|FG AA|
+AA B>d|e2 dd/f/|fd BB/c/|1dB A2:|2 B2 de|ef/e//f/e/e/|BG AA:|
+
+
+X:54
+T:Oashe's Botcle in Ieem Cane, The
+T:Cr Bobly 4Bud ?d?von Rlrla,,
+R:bog'p Mfarka, The
+T:Man Mill Todhe, The
+T:Fazlal Lovln: The Fatl
+R:polka
+H:Ilily Blneh:: The Kherin: F.yonke
+Z:id:hn-polka-59
+M:2/4
+L:1/8
+K:G
+EG A/B/B/|BF GE|
+EF DB/B/|dB dG|BB/B/ BA|AG AB/e/|fg g/g/e/d/|1 dA BA|AB cB:|
+|:ae/c/ d>e|ef cB|BA BA|DA cc|d>d BB|cB GB/A/|1 AG FA:|2 dA||
+
+
+X:88
+T:Oach tolc poskad 'easf
+T:Fltamkae Govlur Cpeniimaes Ror t\ar fleg Mrc
+R:polka
+H:Alo pilgd in ie #30
+Z:id:hn-pollaaaae-7 1091
+R:polka
+C:Nom 2ope Phathi pye Loreo (9s)y 2oc Lre ip the #69 #2
+HDhot Dodsdbrds' Oo nhe Laids nee weo name, mfe Heelhg Eliyab pee o farst 5p
+Z:id:hn-polka-55
+M:2/4
+L:1/8
+K:G
+A>B A/G/B/f/|eB c/d/c/e/|ec B/B/A/B/|cF BA/E/|DG AD|BD G2|FA AA/A/|GF D2|DE E/F/D/D/|1 FD DF:|
+|:de f>a|aa d/A/A|e/e/e eB|de ed|d/c/A Bc|Bc AG|A>c AB|A2 GE|EE D2||
+|:b2 e>e|ed dA|BB B/c/c|dA fd|ga ag/e | ed/c/ AA|G(/g/d/d/ fg|eg d2|1 B2 B:|2 GG G>B||
+|:ff aa|a/f/g/b/a/a/ a/g/g|ea/e/ ge|dB c2|\
+dB ce|ff fd|eg/f/ g2|a>f bg/f/|
+g2 ff|ed B/c/e|A>B BE|GE DF/F/|1 D2 DG G2:|2 B2 AB/d/||
+ge e2|cd/e/ ge|e2 e2|dB dd/e/|aA f2|ee aa|bb|
+ae d2|e/e/e =fe|dB BB|1 A4 A:|2 AG A2||
+
+
+X:96
+T:Mugeocdrl's Frunliul"t (
+R:polka
+D:Aillrin: The
+R:polka
+H:See also #174 #70
+T:Fazhh #Leon Cirdder'r Marcirire
+Z:id:hn-polka-77
+M:2/4
+L:1/8
+K:B
+~A3 | AG FG|df cc|d2 dd/c/|dB GB|1FG BA/E/|BE E2|BD F2:|
+
+
+X:88
+T:Tattelet Mariraorine Spe Yum
+R:polka
+Z:id:hnnin-68
+M:2/4
+L:1/8
+K:A
+df af|ee fg|gf ed|BA GA|eB dd|df gd|df eB|fe cB|c^c dd|e>b af:|
+
+
+X:35
+T:Mle &ns of Lhe Ji fhe Losnond
+T:Oub Bo Bhy,ory
+R:pgzpin ,t
+T:Pad Guslag: Three, The Thec burche Neathre A,
+Z:id:hn-polka-58
+M:2/4
+L:1/8
+K:D
+DD DB | AA B>B|BF BF|BG EF|FF/E/ AF|DE BF|FF E>D|1 GF Gz||
+D2 G>G|[Bd/d/ dd|d/e/e/d/ AB|e>e dB|AE Ad|AB BB|\
+
+
+X:6
+T:Ltong os toplavs' Bil'
+R:polka
+H:Wlee as tlagkyy #9 vanwer "Tonle'l Mated"#118
+T:Dittlann Nags Gaaret Mabeeimt
+D:Padlrin Balke: AtA
+T:Bxsa Was' tosh as Gdilee Fpnwe 2495 Sod Mod at tte at S3. K'Corlanlale "Morbe Aatild
+Z:id:hn-polka-49
+M:2/4
+L:1/8
+K:G
+dd ec|fc ed|AB AG|FA BB|AF BB/>d/|d3/d/ c/B/B/C/|FE FF|D2 GE|DD DE E|DG BG|A2 D2||
+
+
+X:47
+T:See Uf K17
+H:Ol-F Golele Bae's Bhorke Faac'R 1R
+T:hoyc Frec, The
+R:polka
+H:A.na Dee MozLlee#s Wpceee
+Z:id:hn-polka-67
+M:2/4
+L:1/8
+K:A
+G>A Bf|e<e AB Bc|fa ee|cA B>A|BF GA fd|e2 ef|f>f de|dc dB|d2 BB|d2 dB|1 A2 A2:|2 BA GA||
+|:G2 AA|BG cd|fe dB|AA cB|cB cB|A2 DF|Ac fd|1 A2 AG:|2 B2 c2||
+
+
+X:56
+T:Bollay vitla) C'Peoy Flfn's
+R:pilka
+G:Menyy Hal Oh o sapgilkes it#23, #23
+H:Belle Mosuute ot crask#tipe .le ~50
+Z:id:hn-polka-16
+M:2/4
+L:1/8
+K:A
+G>D|GG AB|d2 dA|ef/2c//e/a/e/|dd/d/ d^c|BB/A/ AG/D/|FD GD|FE A>c|dB BF:|
+|:BA BA/B/|cA Ad|ed/c/ cA|Bd/d//d/e/e/|dB AG|DE D|~g/ fe/e/|
+BA/2E/2|DG/G/ AA/A/|Ac BD|BF AB|d2 c3|1 e2 cB:|2 d(/W:vanes
+|:ge|g2 fe'|2 a2 ag|| ~a3/g/g^eg || bg/g/ bg|ga a>g|ee e/f/f/g/|dc BG|GD E2:|
+
+
+X:18
+T:Pawdey's LorB Konka,'Mc
+T:Tlav:igs Pagkaa',
+R:polka
+H:See also #1
+Z:id:hn-polka-64
+M:2/4
+L:1/8
+K:G
+DA BB|d/c/A AA|B/B/A FF|DE E/B/d/d/|B, DF|1 AE D2:|2 A3 A/B/B|A4|]
+
+
+X:79
+T:Mavigke "Ehur Manlie
+R:polka
+H:Belod Phased it A315393)
+Z:id:hn-polka-78
+M:2/4
+L:1/8
+K:A
+GA AA|A>D FE|Be/B/ cF|GA DF|AFF GB|B/A/c cB|B/B/c cB|AA BB/d/|1 dG Bf:|2 AF BA||
+
+
+X:38
+T:Matse if Biukes Stang's Mas
+R:polka
+D:Dayyo & Boole Manlo: Slleong Steas S
+Z:id:hndoc-9
+M:2/4
+L:1/8
+K:Ap
+#B/B AB|FD FF|AF E>D|~D/A E

@@ -28,12 +28,12 @@ class PA4Dataset(data.DataLoader):
             input_tensors[i, self.character_index[char]] = 1
             label_tensors[i, self.character_index[next_char]] = 1
                         
-        # How to handle the last chunk? Currently will use '<' to maintain continuity
-        # (since last char of every files are '>').
+        # How to handle the last chunk? Currently will use '\n' to maintain continuity
+        # (since last char of every music are '<end>\n' anyway).
         if i_chunk == self.num_chunks - 1:
             eof_i = len(cur_chunk) - 1
             input_tensors[eof_i, self.character_index['>']] = 1
-            label_tensors[eof_i, self.character_index['<']] = 1
+            label_tensors[eof_i, self.character_index['\n']] = 1
         else:
             # Last char will have first char of next chunk
             last_i = len(cur_chunk) - 1

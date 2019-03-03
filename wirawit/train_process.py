@@ -16,7 +16,7 @@ import torch.nn as nn
 import torch.optim as optim
 
 
-SESSION_NAME = "multi2_lstm150"
+SESSION_NAME = "lstm100_300epochs"
 PARENT_PATH_TO_SAVE_RESULT = './'
 
 print("Session: " + SESSION_NAME)
@@ -24,9 +24,9 @@ print("---------------")
 
 print("Loading data...")
 
-LEARNING_RATE = 0.001
+LEARNING_RATE = 0.0001
 
-all_loaders, other_infos = build_all_loaders('../pa4Data/', chunk_size=100, customize_loader_params={
+all_loaders, other_infos = build_all_loaders('../pa4Data/', chunk_size=200, customize_loader_params={
     'num_workers': 2,
 })
 
@@ -39,11 +39,12 @@ val_loader = all_loaders['val']
 test_loader = all_loaders['test']
 
 INPUT_SIZE = len(char_index)
-HIDDEN_SIZE = 150
-NUM_LAYERS = 2
+HIDDEN_SIZE = 100
+# NUM_LAYERS = 7
 OUTPUT_SIZE = len(char_index)
 
-model = MultiLayerLSTM(INPUT_SIZE, HIDDEN_SIZE, NUM_LAYERS, OUTPUT_SIZE)
+# model = MultiLayerLSTM(INPUT_SIZE, HIDDEN_SIZE, NUM_LAYERS, OUTPUT_SIZE)
+model = BasicLSTM(INPUT_SIZE, HIDDEN_SIZE, OUTPUT_SIZE)
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=LEARNING_RATE)
 
@@ -78,10 +79,10 @@ trainer = PA4Trainer(model, criterion, optimizer, all_loaders, {
     'session_name': SESSION_NAME,
     'n_epochs': 300,
     'print_every_n_epochs': 5,
-    'validate_every_v_epochs': 5,
+    'validate_every_v_epochs': 10,
     'verbose': True,
-    'num_epochs_no_improvement_early_stop': 3,
-    'use_early_stop': True,
+    'num_epochs_no_improvement_early_stop': 5,
+    'use_early_stop': False,
     'pass_hidden_states_between_epochs': False,
 })
 trainer.start()
