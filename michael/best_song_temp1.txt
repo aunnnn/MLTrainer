@@ -1,0 +1,45 @@
+%
+X:28
+T:Remal3 Bly, The
+T:Pad in cormie
+T:Eline Borndo Barrrom's
+R:polka
+Z:id:hn-polka-78
+M:2/4
+L:1/8
+K:G
+de/f/ f>e|dB A>B|e2 fd|e/f/g/g/ af|ed ed/e/|ed B>d|ed ed|gB B'/b/a/b|be f/g/e/d/|dA AB:|
+`
+
+This is a good one
+%
+X:75
+T:Jimher'a Polka
+R:polka
+Z:id:hn-polka-77
+M:2/4
+L:1/8
+K:D
+f>f ef/e/|dB/A/ GB|cd eB|AF EF|FE D2|d>B AF|G2 G2:|
+|:c/ d/a/b/a/ gd|gf e/g/f/e/|fa ge|ec ef/g/|de gg|a ab/a/|ef/e/ dB|A/F/A/d/ ef|af/f/ gb|ab ag|fa f2|1 fd cA:|2 A2 A2||
+|:g2 e>f|gf e>d|ce fe|f/a/e/f/ af|ed BA|eA ed|c/e/f/e/ dB|AF A2:|
+|:cA B2|EG/A/ BA|df/e/ cd|G>A Ed|ec Bc/d/|ed B/c/d|B/A/A/c/ BA|1 GB/B/:iA:|2 A>B A>B||
+`
+
+%
+X:88
+T:Brimlled Boy's Neord, The
+T:Connwy's Mrol
+R:polka
+D:Paruye af tuf.
+Z:id:hn-polka-87
+M:2/4
+L:1/8
+K:D
+G>G GB|1 B2 AG/^G/A/G/F/E/ | FA ED/E/|ED D2|FA FG|G2 GA|B2 Bc|d2 dF|
+|:g2fd Bd|d>B AB|Bd A2:|
+P:Variations:
+d/d/|eg/f/ ec/B/|AF Ad/e/|a/f/g/f/ g/a/g/a/|ba gf|B/e/f/e/ AB|AB c BA/^F|
+Bd ef|fe ed|1 BA AB/d/|ea b/b/g/e/|dd B2|AF AB|cB AG|FE DF/G/|
+B2 d>e|f>g gg|fe eA|dB AB|cB cA|AB B/c/d|ef ab|ea gd|1 dc cd:|2 cB AG||
+`

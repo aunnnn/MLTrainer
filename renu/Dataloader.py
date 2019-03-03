@@ -13,6 +13,13 @@ class Dataloader():
         output[index] = 1
         return output
     
+    def encode_string(self,line):
+        hotencoded_seq=[]
+        for char in line:
+            hotencoded_seq.append(self.__hotencode_char(char))
+        return torch.stack(hotencoded_seq,dim=0)
+  
+    
     def __encode_file(self,filepath):
         hotencoded_seq, numerized_seq = [],[]
 
