@@ -15,24 +15,18 @@ class VanillaRNN(nn.Module):
         self.h2o = nn.Linear(num_hidden, num_output)
         self.tanh = nn.Tanh()
         
-        self.hidden = self.reset_hidden()
+        self.hidden = None
        
         init.xavier_normal_(self.i2h.weight)
         init.xavier_normal_(self.h2o.weight)
         
     
-    def forward(self, input):
+    def forward(self, input): 
         if self.hidden is None:
-            self.hidden = self.init_hidden(input.size()[1], self.computing_device)
-           
-        if self.hidden.size()[1] > input.size()[1]:
-            self.full_size_hidden = self.hidden
-            self.hidden = self.hidden[:, :input.size()[1], :]
-        if self.hidden.size()[1] < input.size()[1]:
-            self.hidden = self.full_size_hidden
-        
-                
-        input_combined = torch.cat((input, self.hidden), 2)
+            self.hidden = self.init_hidden(self.computing_device)
+            print("init new hidden")
+         
+        input_combined = torch.cat((input, self.hidden), 1)
         
         # Input+Hidden to Hidden
         a = self.i2h(input_combined)
@@ -43,7 +37,7 @@ class VanillaRNN(nn.Module):
         # Hidden to Output
         output = self.h2o(self.hidden)
         
-        return output[0]
+        return output
    
     def reset_hidden(self, computing_device=None):
         self.hidden = None
@@ -53,8 +47,8 @@ class VanillaRNN(nn.Module):
             self.hidden = (self.hidden.detach())
     
     # Helper to init hidden state
-    def init_hidden(self, num_row, computing_device=None):
-        h = torch.zeros(1, num_row, self.num_hidden)
+    def init_hidden(self, computing_device=None):
+        h = torch.zeros(1, self.num_hidden)
         if computing_device:
             return h.to(computing_device)
         else:
