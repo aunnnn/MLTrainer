@@ -5,6 +5,9 @@ import json
 import numpy as np
 import pathlib
 import pprint
+import sys
+sys.path.insert(0, '../shared')
+from models.vanilla_rnn import VanillaRNN
     
 
 class PA4Trainer:
@@ -71,8 +74,16 @@ class PA4Trainer:
         self.VALIDATE_EVERY_V_EPOCHS = config['validate_every_v_epochs']
         self.VERBOSE = config['verbose']
         self.NUM_EPOCHS_NO_IMPROVEMENT_EARLY_STOP = config['num_epochs_no_improvement_early_stop']
+
         self.USE_EARLY_STOP = config['use_early_stop']
-        self.PASS_HIDDEN_STATE_BETWEEN_EPOCHS = config['pass_hidden_states_between_epochs']
+        self.PASS_HIDDEN_STATE_BETWEEN_EPOCHS = config['pass_hidden_states_between_epochs']    
+
+        self.USE_LR_SCHED = False
+        if 'use_lr_scheduler' in config:
+            self.USE_LR_SCHED = config['use_lr_scheduler']
+        else:
+            config['use_lr_scheduler'] = self.USE_LR_SCHED
+
         
         self.save_folder_path = os.path.join(self.PATH_TO_SAVE_RESULT, self.SESSION_NAME)
         pathlib.Path(self.save_folder_path).mkdir(parents=True, exist_ok=True)
@@ -130,6 +141,9 @@ class PA4Trainer:
         min_val_loss = float('inf')
         prev_val_loss = float('inf')
         consecutive_no_improvement_epochs = 0
+
+        # Create a learning rate scheduler
+        scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(self.optimizer, patience=self.NUM_EPOCHS_NO_IMPROVEMENT_EARLY_STOP-1, verbose=True)
         
         self.is_early_stopped = False
         
@@ -143,7 +157,6 @@ class PA4Trainer:
                 self.model.reset_hidden(self.computing_device)
             
             current_epoch_loss = 0.0
-
             for (inputs, labels) in train_loader:
                 inputs, labels = inputs.to(self.computing_device), labels.to(self.computing_device)
                 loss = self.__train_one_chunk(inputs, labels)
@@ -159,6 +172,9 @@ class PA4Trainer:
                 self.v_interval_train_losses.append(epoch_avg_train_loss)
                 val_loss = self.__get_validation_loss()
                 self.v_interval_val_losses.append(val_loss)
+
+                if self.USE_LR_SCHED:
+                    self.scheduler.step(val_loss)
                 
                 print('Epoch {0}, validation loss: {1}'.format(i_epoch, val_loss))
                 
@@ -223,19 +239,29 @@ class PA4Trainer:
         # Truncated BPTT
         self.model.detach_hidden()    
         self.optimizer.zero_grad()
-
-        # Only one batch
-        logits = self.model(inputs)
-        labels = labels[0]    
-
-        # Turn into non-zero indices
-        label_inds = labels.topk(1, dim=1)[1].view(-1)
-        cross_entropy_loss = self.criterion(logits, label_inds)
+    
+        if isinstance(self.model, VanillaRNN):
+            cross_entropy_loss = 0
+            inputs = inputs[0]
+            label_inds = labels.topk(1)[1]
+            for i in range(len(inputs)):
+                x = inputs[i].unsqueeze_(dim=0)
+                logits = self.model(x)
+                label_inds = labels.topk(1)[1][:, i][0]
+                l = self.criterion(logits, label_inds)
+                cross_entropy_loss += l
+            loss = cross_entropy_loss.item()/len(inputs)
+        else:
+            labels = labels[0]
+            label_inds = labels.topk(1, dim=1)[1].view(-1)
+            logits = self.model(inputs)
+            cross_entropy_loss = self.criterion(logits, label_inds)
+            loss = cross_entropy_loss.item()
 
         cross_entropy_loss.backward()    
         self.optimizer.step()
 
-        return cross_entropy_loss.item()
+        return loss
     
     def __evaluate_loss_one_chunk(self, inputs, labels):
         
@@ -245,15 +271,26 @@ class PA4Trainer:
 
         if len(labels.size()) == 2:
             labels.unsqueeze_(dim=0)
+        
+        # Only one batch   
+        if isinstance(self.model, VanillaRNN):
+            cross_entropy_loss = 0
+            inputs = inputs[0]
+            for i in range(len(inputs)):
+                x = inputs[i].unsqueeze_(dim=0)
+                logits = self.model(x)
+                label_inds = labels.topk(1)[1][:, i][0]
+                l = self.criterion(logits, label_inds)
+                cross_entropy_loss += l
+            loss = cross_entropy_loss.item()/len(inputs)
+        else:
+            labels = labels[0]
+            label_inds = labels.topk(1, dim=1)[1].view(-1)
+            logits = self.model(inputs)
+            cross_entropy_loss = self.criterion(logits, label_inds)
+            loss = cross_entropy_loss.item()
 
-        # Only one batch
-        logits = self.model(inputs)
-        labels = labels[0]    
-
-        # Turn into non-zero indices
-        label_inds = labels.topk(1, dim=1)[1].view(-1)
-        cross_entropy_loss = self.criterion(logits, label_inds)
-        return cross_entropy_loss.item()        
+        return loss      
         
         
     def __save_result(self):
